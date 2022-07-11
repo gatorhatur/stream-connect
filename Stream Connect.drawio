@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-07-11T22:54:33.078Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="ws7QFXdGtDryB7dD1taE" version="20.0.4" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-07-11T23:32:20.838Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="gn8VSiraB4PqLZbi1SiJ" version="20.0.4" type="github" pages="3">
   <diagram id="Ak_6PLhMbCiVXatLOwjV" name="Page Layout">
-    <mxGraphModel dx="1422" dy="1872" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -347,6 +347,61 @@
         </mxCell>
         <mxCell id="fSkITsUwCbPFhRJOIOhU-7" value="Sample 5" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=21;" vertex="1" parent="1">
           <mxGeometry x="315" y="400" width="155" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="n4ceWn8FQcr7qhaXnkZ7" name="User Journey">
+    <mxGraphModel dx="2272" dy="892" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ITFoYQE2wAbQyzZCcl7x-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.511;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=21;" edge="1" parent="1" source="ITFoYQE2wAbQyzZCcl7x-1" target="ITFoYQE2wAbQyzZCcl7x-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ITFoYQE2wAbQyzZCcl7x-1" value="User enters a search" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="221" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ITFoYQE2wAbQyzZCcl7x-7" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.033;entryY=0.522;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=21;" edge="1" parent="1" source="ITFoYQE2wAbQyzZCcl7x-2" target="ITFoYQE2wAbQyzZCcl7x-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ITFoYQE2wAbQyzZCcl7x-12" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=21;" edge="1" parent="1" source="ITFoYQE2wAbQyzZCcl7x-2" target="ITFoYQE2wAbQyzZCcl7x-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ITFoYQE2wAbQyzZCcl7x-2" value="Is Actor?" style="html=1;whiteSpace=wrap;aspect=fixed;shape=isoRectangle;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="275" y="215" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ITFoYQE2wAbQyzZCcl7x-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=21;" edge="1" parent="1" source="ITFoYQE2wAbQyzZCcl7x-5" target="ITFoYQE2wAbQyzZCcl7x-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ITFoYQE2wAbQyzZCcl7x-5" value="Pull movies of actor" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="290" y="410" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ITFoYQE2wAbQyzZCcl7x-10" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=21;" edge="1" parent="1" source="ITFoYQE2wAbQyzZCcl7x-6" target="ITFoYQE2wAbQyzZCcl7x-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ITFoYQE2wAbQyzZCcl7x-11" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=21;" edge="1" parent="1" source="ITFoYQE2wAbQyzZCcl7x-6" target="ITFoYQE2wAbQyzZCcl7x-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ITFoYQE2wAbQyzZCcl7x-6" value="Is Movie?" style="html=1;whiteSpace=wrap;aspect=fixed;shape=isoRectangle;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="550" y="215" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ITFoYQE2wAbQyzZCcl7x-8" value="Display movie" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="565" y="410" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ITFoYQE2wAbQyzZCcl7x-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=21;" edge="1" parent="1" source="ITFoYQE2wAbQyzZCcl7x-9" target="ITFoYQE2wAbQyzZCcl7x-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="120" />
+              <mxPoint x="30" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ITFoYQE2wAbQyzZCcl7x-9" value="Display Alert" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="820" y="220" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ITFoYQE2wAbQyzZCcl7x-13" value="Display Movies" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="290" y="550" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
