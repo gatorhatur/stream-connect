@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-07-11T22:45:50.661Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="ABqBtwLVHkKcQcNbiqCp" version="20.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-11T22:46:17.584Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="J3Q60URf49xV2V5u4gHg" version="20.0.4" type="github">
   <diagram id="Ak_6PLhMbCiVXatLOwjV" name="Page-1">
-    <mxGraphModel dx="1422" dy="1872" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="1992" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -300,6 +300,9 @@
         </mxCell>
         <mxCell id="HzVnUczQ9QOxi_G6JP10-29" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.no_symbol;labelBackgroundColor=#FF1F0F;" parent="1" vertex="1">
           <mxGeometry x="1410" y="928" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tpfnFMr_v2N5F97Y4lx6-1" value="Card Display Prototypes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=21;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="560" y="690" width="260" height="70" as="geometry" />
         </mxCell>
         <mxCell id="6lMFUfr0LPkwI6VHOKyJ-1" value="Titles:&lt;br&gt;&lt;br&gt;streamEnvy&lt;br&gt;stream Connect&lt;br&gt;BingeMore" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=left;verticalAlign=top;" vertex="1" parent="1">
           <mxGeometry x="30" y="-320" width="340" height="310" as="geometry" />
