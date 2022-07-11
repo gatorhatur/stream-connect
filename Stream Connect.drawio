@@ -1,1 +1,310 @@
-<mxfile host="app.diagrams.net" modified="2022-07-11T19:32:59.498Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="iq9bxyI_3RqDnEwF1L1H" version="20.0.4" type="github"><diagram id="Ak_6PLhMbCiVXatLOwjV" name="Page-1">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</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-07-11T22:45:50.661Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="ABqBtwLVHkKcQcNbiqCp" version="20.0.4" type="github">
+  <diagram id="Ak_6PLhMbCiVXatLOwjV" name="Page-1">
+    <mxGraphModel dx="1422" dy="1872" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="80" width="840" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="81" width="270" height="589" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-5" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="332.5" y="106" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-6" value="Movie Poster" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="327.5" y="121" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-7" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="414.5" y="112" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-8" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="414.5" y="147" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-9" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="414.5" y="182" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-10" value="Movie Title" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="337.5" y="226" width="135" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-11" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="504.5" y="106" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-12" value="Movie Poster" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="499.5" y="121" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-13" value="Movie Title" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="509.5" y="226" width="135" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-14" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="586.5" y="182" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-15" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="586.5" y="112" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-26" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1050" y="76" width="840" height="624" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-27" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1070" y="93" width="800" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-28" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1180" y="236" width="600" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-29" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="1230" y="256" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-30" value="Movie Poster" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="1225" y="271" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-31" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1312" y="262" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-32" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1312" y="297" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-33" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1312" y="332" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-34" value="Movie Title" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1235" y="376" width="135" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-35" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="1395" y="256" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-36" value="Movie Poster" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="1390" y="271" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-37" value="Movie Title" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1400" y="376" width="135" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-38" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1477" y="332" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-39" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1477" y="262" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-40" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="1230" y="426" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-41" value="Movie Poster" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="1225" y="441" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-42" value="Movie Title" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1235" y="546" width="135" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-43" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1312" y="502" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-44" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1312" y="432" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-45" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="1395" y="426" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-46" value="Movie Poster" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="1390" y="441" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-47" value="Movie Title" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1400" y="546" width="135" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-48" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1477" y="502" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-49" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1477" y="432" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-50" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="1565" y="256" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-51" value="Movie Poster" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="1560" y="271" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-52" value="Movie Title" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1570" y="376" width="135" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-53" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1647" y="332" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-54" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1647" y="262" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-55" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="1565" y="426" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-56" value="Movie Poster" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="1560" y="441" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-57" value="Movie Title" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1570" y="546" width="135" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-58" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1647" y="502" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-59" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1647" y="432" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-84" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="672.5" y="106" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-85" value="Movie Poster" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="667.5" y="121" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-86" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="754.5" y="112" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-87" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="754.5" y="147" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-88" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="754.5" y="182" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-89" value="Movie Title" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="677.5" y="226" width="135" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-90" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="332.5" y="276" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-91" value="Movie Poster" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="327.5" y="291" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-92" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="414.5" y="282" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-93" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="414.5" y="317" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-94" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="414.5" y="352" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-95" value="Movie Title" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="337.5" y="396" width="135" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-96" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="504.5" y="276" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-97" value="Movie Poster" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="499.5" y="291" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-98" value="Movie Title" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="509.5" y="396" width="135" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-99" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="586.5" y="352" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-100" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="586.5" y="282" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-101" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="672.5" y="276" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-102" value="Movie Poster" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="667.5" y="291" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-103" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="754.5" y="282" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-104" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="754.5" y="317" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-105" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="754.5" y="352" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VjZ6RCnpF5j11ZpRup7t-106" value="Movie Title" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="677.5" y="396" width="135" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-1" value="Search Tab" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="87" width="60" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-2" value="History" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="87" width="60" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="710" width="400" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-4" value="Movie Poster" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="710" width="110" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-5" value="Other Actors" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="217.5" y="757" width="192.5" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-6" value="Harry Potter" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="217.5" y="720" width="192.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-7" value="Disney Plus&lt;br&gt;Netflix" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="420" y="720" width="70" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-8" value="Movie Thumb" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="890" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-9" value="Harry Potter" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="170" y="890" width="272.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-10" value="Disney Plus | Netflix" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="170" y="920" width="272.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-11" value="Movie Thumb" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="970" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-12" value="Harry Potter" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="170" y="972" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-13" value="Disney Plus | Netflix" style="rounded=0;whiteSpace=wrap;html=1;align=right;" parent="1" vertex="1">
+          <mxGeometry x="250" y="972" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-14" value="Other Actors" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="170" y="1002" width="270" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-15" value="Hulu" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1090" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-16" value="Netflix&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Hulu%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%221090%22%20y%3D%22760%22%20width%3D%22120%22%20height%3D%2260%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1235" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-17" value="Service" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1380" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-18" value="Movie Thumb" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="790" y="830" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-19" value="Harry Potter" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="840" y="830" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-20" value="Other Actors" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="840" y="862" width="240" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-21" value="" style="sketch=0;html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;verticalAlign=top;fillColor=#2D9C5E;shape=mxgraph.gcp2.check" parent="1" vertex="1">
+          <mxGeometry x="1120" y="830" width="75" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-22" value="" style="sketch=0;html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;verticalAlign=top;fillColor=#2D9C5E;shape=mxgraph.gcp2.check" parent="1" vertex="1">
+          <mxGeometry x="1405" y="830" width="75" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-23" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.no_symbol;labelBackgroundColor=#FF1F0F;" parent="1" vertex="1">
+          <mxGeometry x="1265" y="830" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-24" value="Movie Thumb" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="790" y="912" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-25" value="Harry Potter" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="840" y="912" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-26" value="Other Actors" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="840" y="944" width="240" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-27" value="" style="sketch=0;html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;verticalAlign=top;fillColor=#2D9C5E;shape=mxgraph.gcp2.check" parent="1" vertex="1">
+          <mxGeometry x="1257.5" y="920" width="75" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-28" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.no_symbol;labelBackgroundColor=#FF1F0F;" parent="1" vertex="1">
+          <mxGeometry x="1127.5" y="920" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HzVnUczQ9QOxi_G6JP10-29" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.no_symbol;labelBackgroundColor=#FF1F0F;" parent="1" vertex="1">
+          <mxGeometry x="1410" y="928" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6lMFUfr0LPkwI6VHOKyJ-1" value="Titles:&lt;br&gt;&lt;br&gt;streamEnvy&lt;br&gt;stream Connect&lt;br&gt;BingeMore" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="30" y="-320" width="340" height="310" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
