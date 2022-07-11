@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-11T23:54:35.059Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="ll_FIYQb2U_-xwTDUDUL" version="20.0.4" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-07-11T23:58:33.526Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="LfTUgRE4mbIBb4dz7rDw" version="20.0.4" type="github" pages="3">
   <diagram id="Ak_6PLhMbCiVXatLOwjV" name="Page Layout">
     <mxGraphModel dx="1422" dy="1992" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -265,8 +265,8 @@
         <mxCell id="TNf8lCwS_tLqii9rmylj-7" value="Movie Name" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="610" width="220" height="34" as="geometry" />
         </mxCell>
-        <mxCell id="XlFxyv6mYBoePNlGhWkb-1" value="APIs:&lt;br&gt;&lt;br&gt;- Finding movies of actor:&amp;nbsp;https://developers.themoviedb.org/3/discover/movie-discover&lt;br&gt;- Find actor id:&amp;nbsp;https://developers.themoviedb.org/3/search/search-people&lt;br&gt;- Get streaming services:&amp;nbsp;https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontSize=21;align=left;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="410" y="-320" width="800" height="210" as="geometry" />
+        <mxCell id="XlFxyv6mYBoePNlGhWkb-1" value="APIs:&lt;br&gt;&lt;br&gt;- Finding movies of actor:&amp;nbsp;https://developers.themoviedb.org/3/discover/movie-discover&lt;br&gt;- Find actor id:&amp;nbsp;https://developers.themoviedb.org/3/search/search-people&lt;br&gt;- Get streaming services:&amp;nbsp;https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/&lt;br&gt;- populating images:&amp;nbsp;https://developers.themoviedb.org/3/getting-started/images&lt;br&gt;" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontSize=21;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="410" y="-320" width="800" height="240" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
