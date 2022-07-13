@@ -9,10 +9,29 @@
     <title>Stream Connect</title>
 </head>
 
-<body>
-    <h1 class="blue-text text-darken-2">TESTING MATERIALIZE</h1>
+<body class="black">
+    <header class="row green lighten-2">
+        This is the header
+    </header>
+    <main class="row">
+        <nav class="col s12 l3 blue lighten-2">
+            <ul class="tabs">
+                <li class="tab col s12 l4"><a href="#search">Search</a></li>
+                <li class="tab col s12 l4"><a href="#history">History</a></li>
+                <li class="tab col s12 l4 disabled"><a href="#placeholder">Placeholder</a></li>
+            </ul>
+
+            <div id="search" class="col s12">This is for searching</div>
+            <div id="history" class="col s12">This is for history</div>
+        </nav>
+
+        <section class="col s12 l9 red lighten-2" id="movies">
+            main content test
+        </section>
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
