@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-07-13T00:44:42.905Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="_U7JcPAHy3ESKwlG0Ybd" version="20.0.4" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-07-13T01:00:15.277Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="gg_XqOrSBDluSZGNcovK" version="20.0.4" type="github" pages="3">
   <diagram id="Ak_6PLhMbCiVXatLOwjV" name="Page Layout">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="1992" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -613,8 +613,8 @@
         <mxCell id="ITFoYQE2wAbQyzZCcl7x-13" value="Display Movies" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontSize=21;" vertex="1" parent="1">
           <mxGeometry x="290" y="581" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="pxi-v0AyM2IaKfViKumx-6" value="Text" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="340" y="640" width="40" height="20" as="geometry" />
+        <mxCell id="3754czOx2Mj5HrmarTOn-2" value="Functions:&lt;br&gt;&lt;br&gt;- Query Selector for submit (main handler)&lt;br&gt;&lt;br&gt;- Search Actors API Call (TMDB) returns array of a single id&lt;br&gt;- Search Movies API Call (TMDB) returns array of single&lt;br&gt;- Get Movies API Call (TMDB) returns Array of ID&#39;s set to limit&lt;br&gt;- Get Services API Call (RapidAPI) returns&lt;br&gt;&lt;br&gt;- display movies - requires array parameter&lt;br&gt;&lt;br&gt;- Search History (uses Local Storage)&lt;br&gt;&lt;br&gt;Static Variables:&lt;br&gt;- tmdbApiKey&lt;br&gt;- rapidApiKey&lt;br&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="-190" y="380" width="390" height="440" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
