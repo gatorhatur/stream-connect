@@ -10,28 +10,142 @@
 </head>
 
 <body class="black">
-    <header class="row green lighten-2">
-        This is the header
-    </header>
+
     <main class="row">
         <nav class="col s12 l3 blue lighten-2">
-            <ul class="tabs">
-                <li class="tab col s12 l4"><a href="#search">Search</a></li>
-                <li class="tab col s12 l4"><a href="#history">History</a></li>
-                <li class="tab col s12 l4 disabled"><a href="#placeholder">Placeholder</a></li>
-            </ul>
+            
+                <ul class="tabs">
+                    <li class="tab col s12 l4"><a href="#search">Search</a></li>
+                    <li class="tab col pull-s12 s12 l4"><a href="#history-container">History</a></li>
+                    <li class="tab col s12 l4 disabled"><a href="#placeholder"></a></li>
+                </ul>
 
-            <div id="search" class="col s12">This is for searching</div>
-            <div id="history" class="col s12">This is for history</div>
+                <div id="search" class="col s12 pv-10">
+                    <div class="input-field">
+                        <input placeholder="Bradley Cooper" id="search_input" type="text" class="validate">
+                        <label for="search_input">Search by Actor or Movie Title</label>
+                        <a class="waves-effect waves-light btn">Search</a>
+                        <div class="switch text-black">
+                            <label>
+                                By Actor
+                                <input type="checkbox">
+                                <span class="lever black"></span>
+                                By Movie
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div id="history-container" class="col s12">
+                    <ul class="history">
+                        <li>Daniel Radcliffe</li>
+                    </ul>
+                </div>
+            
         </nav>
 
-        <section class="col s12 l9 red lighten-2" id="movies">
-            main content test
+        <section class="col s12 l9" id="content">
+            <header class="p-10 row green lighten-2">
+                This is the header
+            </header>
+            <section class="p-10 row red lighten-2" id="movies">
+                <div class="card horizontal teal col s12 m5 l3">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/75x125.png"></img>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <span class="card-title">Harry Potter</span>
+                            <p id="descrp">Cast: Daniel Radcliffe</p>
+                            <div class="providers" id="tmdb_movie_id">
+                                <img src="https://image.tmdb.org/t/p/original/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg" class="provider"></img>
+                                <img src="https://image.tmdb.org/t/p/original/emthp39XA2YScoYL1p0sdbAH2WA.jpg" class="provider"></img>
+                                <img src="https://image.tmdb.org/t/p/original/zxrVdFjIjLqkfnwyghnfywTn3Lh.jpg" class="provider"></img>
+                                <img src="https://image.tmdb.org/t/p/original/Ajqyt5aNxNGjmF9uOfxArGrdf3X.jpg" class="provider"></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card horizontal teal col s12 m5 l3">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/75x125.png"></img>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <span class="card-title">Harry Potter</span>
+                            <div class="providers" id="tmdb_movie_id">
+                                <img src="https://image.tmdb.org/t/p/original/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg" class="provider"></img>
+                                <img src="https://image.tmdb.org/t/p/original/emthp39XA2YScoYL1p0sdbAH2WA.jpg" class="provider"></img>
+                                <img src="https://image.tmdb.org/t/p/original/zxrVdFjIjLqkfnwyghnfywTn3Lh.jpg" class="provider"></img>
+                                <img src="https://image.tmdb.org/t/p/original/Ajqyt5aNxNGjmF9uOfxArGrdf3X.jpg" class="provider"></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+                <div class="card horizontal teal col s12 m5 l3">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/75x125.png"></img>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <span class="card-title">Harry Potter</span>
+                            <p id="descrp">Moive stuff Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta delectus odio maxime, officiis nulla recusandae ullam dolore, vitae aperiam, perspiciatis provident ipsa pariatur! Laborum numquam atque aspernatur eos voluptas beatae.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card horizontal teal col s12 m5 l3">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/75x125.png"></img>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <span class="card-title">Harry Potter</span>
+                            <p id="descrp">Moive stuff</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card horizontal teal col s12 l5">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/75x125.png"></img>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <span class="card-title">Harry Potter</span>
+                            <p id="descrp">Moive stuff</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card horizontal teal col s12 m5 l3">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/75x125.png"></img>
+                    </div>
+                    <div class="card-stacked row">
+                        <div class="card-content">
+                            <div class="col s11">
+                            <span class="card-title">Harry Potter</span>
+                            <p id="descrp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem distinctio facilis obcaecati quod quidem sit culpa eveniet adipisci dolores dolor hic suscipit laboriosam debitis, inventore totam quisquam illo modi velit.</p>
+                        </div>
+                        <div class="providers col s1" id="tmdb_movie_id">
+                            <img src="https://image.tmdb.org/t/p/original/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg" class="provider"></img>
+                            <img src="https://image.tmdb.org/t/p/original/emthp39XA2YScoYL1p0sdbAH2WA.jpg" class="provider"></img>
+                            <img src="https://image.tmdb.org/t/p/original/zxrVdFjIjLqkfnwyghnfywTn3Lh.jpg" class="provider"></img>
+                            <img src="https://image.tmdb.org/t/p/original/Ajqyt5aNxNGjmF9uOfxArGrdf3X.jpg" class="provider"></img>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+             </section>
         </section>
+        
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

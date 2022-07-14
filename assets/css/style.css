@@ -3,3 +3,52 @@
 .p-10 {
     padding: 10px
 }
+
+/*Top and Bottom padding*/
+.pv-10{
+    padding: 10px 0;
+}
+
+.ml-10 {
+    margin-left: 20px;
+}
+
+/*Override default materialize margin*/
+.row {
+    margin: 0;
+}
+
+.provider {
+    height:25px;
+    width:25px;
+}
+
+
+#content {
+    max-height: 100vh;
+    overflow:hidden
+}
+
+#movies {
+    align-items: space-evenly;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+@media screen and (max-width: 900px){
+    #content {
+        max-height: none;
+        overflow:visible;
+    }
+}
+
+@media screen and (min-width:601px){
+    .card {
+        margin-left: 5vw !important;
+    }
+}
