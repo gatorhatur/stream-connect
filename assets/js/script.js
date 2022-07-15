@@ -30,3 +30,32 @@ document.addEventListener('DOMContentLoaded', function () {
 $(document).ready(function(){
     $('.tabs').tabs();
 });
+
+var getMovieInfo = function (movieId) {
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'f7d7f2fe88msh572b312c212385cp1f28e8jsn8e41ff9814a4',
+            'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+        }
+    };
+
+    var movieId = "120";
+
+    var movieInfo = "https://streaming-availability.p.rapidapi.com/get/basic?country=us&tmdb_id=movie%2F" + movieId + "&output_language=en";
+
+    fetch(movieInfo, options)
+        .then(response => response.json())
+        .then((data) => {
+            console.log(data.cast);
+            console.log(data.streamingInfo);
+
+            var cast = data.cast;
+            var streamingInfo = data.streamingInfo;
+
+            return (cast, streamingInfo);
+        })
+        .catch(err => console.error(err));
+}
+
+getMovieInfo();
