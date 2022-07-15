@@ -16,6 +16,8 @@ const providers = [
     }
 ]
 
+let movies = [];
+
 
 console.log("Script files is working");
 
@@ -30,3 +32,20 @@ document.addEventListener('DOMContentLoaded', function () {
 $(document).ready(function(){
     $('.tabs').tabs();
 });
+
+var getMovieId = function (id) {
+  const apiUrl = "https://api.themoviedb.org/3/discover/movie?api_key="+tmdbApiKey+"&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_people="+id+"&with_watch_monetization_types=flatrate"
+  console.log(apiUrl);
+
+  fetch(apiUrl).then(function (response) {
+    if (response.ok) {
+      response.json().then(function (data) {
+        console.log(data);
+      })
+    }
+    else {
+      //trigger modal
+      console.log("Response no ok");
+    }
+  })
+}
