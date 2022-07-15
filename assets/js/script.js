@@ -55,6 +55,7 @@ var getMovieId = function (id) {
             overview: element.overview,
             streams: ""
           }
+          
           movies.push(movieObj);
         })
       })
