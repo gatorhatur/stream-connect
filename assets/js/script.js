@@ -17,7 +17,7 @@ const providers = [
 ]
 
 let movies = [];
-
+var test
 
 console.log("Script files is working");
 
@@ -31,21 +31,31 @@ document.addEventListener('DOMContentLoaded', function () {
 //initialize tabs
 $(document).ready(function(){
     $('.tabs').tabs();
-});
+  });
 
-var getMovieId = function (id) {
-  const apiUrl = "https://api.themoviedb.org/3/discover/movie?api_key="+tmdbApiKey+"&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_people="+id+"&with_watch_monetization_types=flatrate"
-  console.log(apiUrl);
+//Search Actor API
 
-  fetch(apiUrl).then(function (response) {
+var searchActorName = function (name) {
+  var actorName = "https://api.themoviedb.org/3/search/person?api_key=346f7b7cb4a8eacfd5f60caf07af955f&language=en-US&query=" + encodeURI(name) + "&page=1&include_adult=false";
+  console.log(actorName);
+
+  fetch(actorName).then(function (response) {
     if (response.ok) {
       response.json().then(function (data) {
-        console.log(data);
+        console.log(data.results[0].id);
+        return data.results[0].id;
       })
     }
-    else {
-      //trigger modal
-      console.log("Response no ok");
-    }
   })
-}
+
+
+  // fetch(actorName).then(function (res) {
+  //   if (res.ok) {
+  //     res.json().then(function (data) {
+  //       console.log(data.results[0].id);
+  //       //var actor = (data.results[0].id);
+  //       return data;
+  //     })
+  //   }
+  // })
+};
