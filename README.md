@@ -21,7 +21,7 @@ SO THAT I can spend less time browsing for movies
 
 ## APIs Used
 
-* [The Movie Database API](https://developers.themoviedb.org/3/search/search-people)
+* [The Movie Database API](https://www.themoviedb.org/documentation/api)
 * [Streaming Availability by Movie of the Night](https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/) 
 
 ## Assets
