@@ -31,7 +31,7 @@ $(document).ready(function(){
     $('.tabs').tabs();
 });
 
-var getMovieInfo = function () {
+var getMovieInfo = function (movieId) {
     const options = {
         method: 'GET',
         headers: {
