@@ -17,7 +17,7 @@ const providers = [
 ]
 
 let movies = [];
-var test
+var actorId = ""
 
 console.log("Script files is working");
 
@@ -36,26 +36,26 @@ $(document).ready(function(){
 //Search Actor API
 
 var searchActorName = function (name) {
+  //set actorId to blank
+  actorId = "";
+
   var actorName = "https://api.themoviedb.org/3/search/person?api_key=346f7b7cb4a8eacfd5f60caf07af955f&language=en-US&query=" + encodeURI(name) + "&page=1&include_adult=false";
   console.log(actorName);
 
-  fetch(actorName).then(function (response) {
-    if (response.ok) {
-      response.json().then(function (data) {
-        console.log(data.results[0].id);
-        return data.results[0].id;
-      })
-    }
+
+//moved then up to json see commented out portion
+ fetch(actorName).then(function(res) {
+        res.json().then(function(data) {
+          //console.log(data.results[0].id);
+          actorId = data.results[0].id;
   })
+      })//.then(function(data) {
+        //console.log(data.results[0].id);
+       // actorId = data.results[0].id;
+//})
+.catch (function(err) {
+  console.log(err);
+})
+  
 
-
-  // fetch(actorName).then(function (res) {
-  //   if (res.ok) {
-  //     res.json().then(function (data) {
-  //       console.log(data.results[0].id);
-  //       //var actor = (data.results[0].id);
-  //       return data;
-  //     })
-  //   }
-  // })
 };
