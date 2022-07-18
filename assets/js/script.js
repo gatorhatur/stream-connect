@@ -18,6 +18,7 @@ const providers = [
 ]
 
 let movies = [];
+let isActor = true;
 
 
 console.log("Script files is working");
@@ -67,7 +68,7 @@ var getMovieId = function (id) {
     }
   })
 }
-=======
+
 var getMovieInfo = function (movieId) {
     const options = {
         method: 'GET',
@@ -94,6 +95,15 @@ var getMovieInfo = function (movieId) {
         })
         .catch(err => console.error(err));
 }
+
+$(".switch").on("change", function (event) {
+  if (isActor) {
+    isActor = false;
+  }
+  else {
+    isActor = true;
+  }
+})
 
 getMovieInfo();
 
