@@ -1,4 +1,3 @@
-
 const tmdbApiKey = "346f7b7cb4a8eacfd5f60caf07af955f";
 const rapidApiKey = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
 const moviePullLimit = 3;
@@ -31,6 +30,7 @@ const imageBaseUrl = "https://image.tmdb.org/t/p/original";
 
 
 let movies = [];
+var actorId = ""
 let isActor = true;
 let page = 1;
 
@@ -47,8 +47,32 @@ document.addEventListener('DOMContentLoaded', function () {
 //initialize tabs
 $(document).ready(function(){
     $('.tabs').tabs();
-});
+  });
 
+//Search Actor API
+
+var searchActorName = function (name) {
+  //set actorId to blank
+  actorId = "";
+
+  var actorName = "https://api.themoviedb.org/3/search/person?api_key=346f7b7cb4a8eacfd5f60caf07af955f&language=en-US&query=" + encodeURI(name) + "&page=1&include_adult=false";
+  console.log(actorName);
+
+
+//moved then up to json see commented out portion
+ return fetch(actorName).then(function(res) {
+        return res.json();
+      }).then(function(data) {
+        //console.log(data.results[0].id);
+        actorId = data.results[0].id;
+        return actorId;
+      })//.then(function(data) {
+      .catch (function(err) {
+        console.log(err);
+      })
+  
+
+};
 
 var getMovieId = function (id) {
   const apiUrl = "https://api.themoviedb.org/3/discover/movie?api_key="+tmdbApiKey+"&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_people="+id+"&with_watch_monetization_types=flatrate"
@@ -162,4 +186,3 @@ $(".switch").on("change", function (event) {
 })
 
 getMovieInfo();
-
