@@ -54,9 +54,12 @@ console.log(title);
 userInputContainer.textContent = "";
 MovieTitleEl.textContent = searchTerm;
 //looper over movies
-for (var i = 0; i <title.length; i++){
+// for (var i = 0; i <title.length; i++){
   
-}
+// }
+movies.forEach(function(element){
+
+})
 };
 
-userInputContainer.addEventListener("sumbit", submitHandler);
+userInputContainer.addEventListener("click", submitHandler);
