@@ -1,92 +1,38 @@
 
 const tmdbApiKey = "346f7b7cb4a8eacfd5f60caf07af955f";
 const rapidApiKey = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
-const moviePullLimit = 5;
-const providers = [
-    {
-        name: "netflix",
-        logo_path: "/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg"
-    },
-    {
-        name: "hulu",
-        logo_path: "/zxrVdFjIjLqkfnwyghnfywTn3Lh.jpg"
-    },
-    {
-        name: "amazon prime",
-        logo_path: "/emthp39XA2YScoYL1p0sdbAH2WA.jpg"
-    },
-    {
-        name: "hotstar",
-        logo_path: "/7Fl8ylPDclt3ZYgNbW2t7rbZE9I.jpg"
-    },
-    {
-        name: "disney plus",
-        logo_path: "/v8vA6WnPVTOE1o39waNFVmAqEJj.jpg"
-    },
-    {
-        name: "hbo max",
-        logo_path: "/Ajqyt5aNxNGjmF9uOfxArGrdf3X.jpg"
-    },
-    {
-        name: "peacock",
-        logo_path: "/8VCV78prwd9QzZnEm0ReO6bERDa.jpg"
-    },
-    {
-        name: "paramount plus",
-        logo_path: "/xbhHHa1YgtpwhC8lb1NQ3ACVcLd.jpg"
-    },
-    {
-        name: "starz",
-        logo_path: "/zVJhpmIEgdDVbDt5TB72sZu3qdO.jpg"
-    },
-    {
-        name: "showtime",
-        logo_path: "/4kL33LoKd99YFIaSOoOPMQOSw1A.jpg"
-    },
-    {
-        name: "apple tv plus",
-        logo_path: "/6uhKBfmtzFqOcLousHwZuzcrScK.jpg"
-    },
-    {
-        name: "mubi",
-        logo_path: "/bVR4Z1LCHY7gidXAJF5pMa4QrDS.jpg"
-    },
-    {
-        name: "stan",
-        logo_path: "/rDd7IEBnJB0gPagFvagP1kK3pDu.jpg"
-    },
-    {
-        name: "now",
-        logo_path: "/cQQYtdaCg7vDo28JPru4v8Ypi8x.jpg"
-    },
-    {
-        name: "crave",
-        logo_path: "/gJ3yVMWouaVj6iHd59TISJ1TlM5.jpg"
-    },
-    {
-        name: "all 4",
-        logo_path: "/kJ9GcmYk5zJ9nJtVX8XjDo9geIM.jpg"
-    },
-    {
-        name: "bbc iplayer",
-        logo_path: "/zY5SmHyAy1CoA3AfQpf58QnShnw.jpg"
-    },
-    {
-        name: "britbox",
-        logo_path: "/aGIS8maihUm60A3moKYD9gfYHYT.jpg"
-    },
-    {
-        name: "zee5",
-        logo_path: "/ajbCmwvZ8HiePHZaOVEgm9MzyuA.jpg"
-    },
-    {
-        name: "curiosity stream",
-        logo_path: "/67Ee4E6qOkQGHeUTArdJ1qRxzR2.jpg"
-    }
-]
+const moviePullLimit = 3;
+const providers = {
+  netflix: "/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg",
+  hulu: "/zxrVdFjIjLqkfnwyghnfywTn3Lh.jpg",
+  amazon: "/emthp39XA2YScoYL1p0sdbAH2WA.jpg",
+  hotstar: "/7Fl8ylPDclt3ZYgNbW2t7rbZE9I.jpg",
+  disney: "/v8vA6WnPVTOE1o39waNFVmAqEJj.jpg",
+  hbo: "/Ajqyt5aNxNGjmF9uOfxArGrdf3X.jpg",
+  peacock: "/8VCV78prwd9QzZnEm0ReO6bERDa.jpg",
+  paramount: "/xbhHHa1YgtpwhC8lb1NQ3ACVcLd.jpg",
+  starz: "/zVJhpmIEgdDVbDt5TB72sZu3qdO.jpg",
+  showtime: "/4kL33LoKd99YFIaSOoOPMQOSw1A.jpg",
+  apple: "/6uhKBfmtzFqOcLousHwZuzcrScK.jpg",
+  mubi: "/bVR4Z1LCHY7gidXAJF5pMa4QrDS.jpg",
+  stan: "/rDd7IEBnJB0gPagFvagP1kK3pDu.jpg",
+  now: "/cQQYtdaCg7vDo28JPru4v8Ypi8x.jpg",
+  crave: "/gJ3yVMWouaVj6iHd59TISJ1TlM5.jpg",
+  all_4: "/kJ9GcmYk5zJ9nJtVX8XjDo9geIM.jpg",
+  bbc: "/zY5SmHyAy1CoA3AfQpf58QnShnw.jpg",
+  britbox: "/aGIS8maihUm60A3moKYD9gfYHYT.jpg",
+  zee5: "/ajbCmwvZ8HiePHZaOVEgm9MzyuA.jpg",
+  curiosity: "/67Ee4E6qOkQGHeUTArdJ1qRxzR2.jpg",
+  findProvider: function (string) {
+    
+  }
+}
+const imageBaseUrl = "https://image.tmdb.org/t/p/original";
+
 
 let movies = [];
 let isActor = true;
+let page = 1;
 
 
 console.log("Script files is working");
@@ -137,7 +83,7 @@ var getMovieId = function (id) {
   })
 }
 
-var getMovieInfo = function (movieId) {
+var getMovieInfo = function (movieId,index) {
     const options = {
         method: 'GET',
         headers: {
@@ -146,7 +92,7 @@ var getMovieInfo = function (movieId) {
         }
     };
 
-    var movieId = "120";
+    //var movieId = "120";
 
     var movieInfo = "https://streaming-availability.p.rapidapi.com/get/basic?country=us&tmdb_id=movie%2F" + movieId + "&output_language=en";
 
@@ -159,9 +105,51 @@ var getMovieInfo = function (movieId) {
             var cast = data.cast;
             var streamingInfo = data.streamingInfo;
 
-            return (cast, streamingInfo);
+          movies[index].overview = cast;
+          movies[index].streams = streamingInfo;
+
+          updateStreamInfo(index);
         })
         .catch(err => console.error(err));
+}
+
+var getAllMovieInfo = async function () {
+  var startIndex = page * moviePullLimit - moviePullLimit;
+  var constraint = moviePullLimit * page;
+  console.log(startIndex, constraint);
+  
+  for (var i = startIndex; i < constraint; i++){
+    await getMovieInfo(movies[i].id, i);
+  }
+}
+
+//parameter is the index of the movie in the movies object array
+var updateStreamInfo = function (index) {
+  //declare empty streams object array
+  var streamsObj = []
+  //declare array of strings containing the keys of the streaming services
+  var streams = Object.keys(movies[index].streams);
+  //if length is 0 then set streaming info to null
+  if (streams.length === 0) {
+    movies[index].streams = null;
+    return
+  }
+
+  //iterate through each streaming service, setting the name, poster url, and direct link to content
+  streams.forEach(function (element) {
+    var stream = {
+      name: element,
+      poster: imageBaseUrl + providers[element],
+      link: movies[index].streams[element].us.link
+    }
+    //push the individual stream info into the streamsObj array
+    streamsObj.push(stream);
+  })
+  
+  //replace the streaming info for the current movie
+  movies[index].streams = streamsObj;
+  return;
+  
 }
 
 $(".switch").on("change", function (event) {
