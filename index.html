@@ -1,3 +1,34 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@rodriguez531 
+gatorhatur
+/
+stream-connect
+Public
+Code
+Issues
+5
+Pull requests
+Actions
+Projects
+1
+Wiki
+Security
+Insights
+stream-connect/index.html
+
+Brandon Davis added tab functionality and styling
+Latest commit 05eb0ad 4 days ago
+ History
+ 2 contributors
+@gatorhatur@MaxKottong
+142 lines (136 sloc)  6.42 KB
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,29 +40,149 @@
     <title>Stream Connect</title>
 </head>
 
+
 <body class="black">
-    <header class="row green lighten-2">
-        This is the header
-    </header>
     <main class="row">
         <nav class="col s12 l3 blue lighten-2">
             <ul class="tabs">
-                <li class="tab col s12 l4"><a href="#search">Search</a></li>
-                <li class="tab col s12 l4"><a href="#history">History</a></li>
-                <li class="tab col s12 l4 disabled"><a href="#placeholder">Placeholder</a></li>
-            </ul>
+                <li class="tab col s12 l4"><a href="#search" class="active">Search</a></li>
+                <li class="tab col s12 l4"><a href="#history-container" class="">History</a></li>
+                <li class="tab col s12 l4 disabled"><a href="#placeholder"></a></li>
+            <li class="indicator" style="left: 0px; right: 620px;"></li></ul>
 
-            <div id="search" class="col s12">This is for searching</div>
-            <div id="history" class="col s12">This is for history</div>
+            <div id="search" class="col s12 active" style="display: block;">
+                <div class="input-field">
+                    <input placeholder="Bradley Cooper" id="search_input" type="text" class="validate">
+                    <label for="search_input" class="active">Search by Actor or Movie Title</label>
+                    <a class="waves-effect waves-light btn">Search</a>
+                    <div class="switch text-black">
+                        <label>
+                            By Actor
+                            <input type="checkbox">
+                            <span class="lever black"></span>
+                            By Movie
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div id="history-container" class="col s12">
+                Daniel Radcliffe
+            </div>
         </nav>
 
-        <section class="col s12 l9 red lighten-2" id="movies">
-            main content test
+        <section class="col s12 l9 white" id="movies">
+            <header class="row green lighten-2">
+                Stream Connect
+            </header>
+            <div class="col s12 l6 blue row movie">
+                <div class="movie-poster col s3 l3">
+                    <img src="./assets/images/HP-test.jpg" alt="" />
+                </div>
+                <div class="movie-title col s6 l6">
+                    Harry Potter
+                </div>
+                <div class="other-actors col s6 l6">
+                    The other actors are: jdhskfgbndsgbdfkgjlhdbfgbdnfkjhgnbdfgjkidfhnbgjkiudfhngdfijkughndfikgjudhnfgdifkjugnhdfkjugndhfgikjudf
+                </div>
+                <div class="streaming-services col s3 l3">
+                    <div class="disney+">
+                        <img src="./assets/images/disney.jpg" alt="" />
+                    </div>
+                    <div class="hbo-max">
+                        <img src="./assets/images/hbo.jpg" alt="" />
+                    </div>
+                    <div class="hulu">
+                        <img src="./assets/images/hulu.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 l6 green row movie">
+                <div class="movie-poster col s3 l3">
+                    <img src="./assets/images/HP-test.jpg" alt="" />
+                </div>
+                <div class="movie-title col s6 l6">
+                    Harry Potter
+                </div>
+                <div class="other-actors col s6 l6">
+                    The other actors are: jdhskfgbndsgbdfkgjlhdbfgbdnfkjhgnbdfgjkidfhnbgjkiudfhngdfijkughndfikgjudhnfgdifkjugnhdfkjugndhfgikjudf
+                </div>
+                <div class="streaming-services col s3 l3">
+                    <div class="disney+">
+                        <img src="./assets/images/disney.jpg" alt="" />
+                    </div>
+                    <div class="hbo-max">
+                        <img src="./assets/images/hbo.jpg" alt="" />
+                    </div>
+                    <div class="hulu">
+                        <img src="./assets/images/hulu.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 l6 purple row movie">
+                <div class="movie-poster col s3 l3">
+                    <img src="./assets/images/HP-test.jpg" alt="" />
+                </div>
+                <div class="movie-title col s6 l6">
+                    Harry Potter
+                </div>
+                <div class="other-actors col s6 l6">
+                    The other actors are: jdhskfgbndsgbdfkgjlhdbfgbdnfkjhgnbdfgjkidfhnbgjkiudfhngdfijkughndfikgjudhnfgdifkjugnhdfkjugndhfgikjudf
+                </div>
+                <div class="streaming-services col s3 l3">
+                    <div class="disney+">
+                        <img src="./assets/images/disney.jpg" alt="" />
+                    </div>
+                    <div class="hbo-max">
+                        <img src="./assets/images/hbo.jpg" alt="" />
+                    </div>
+                    <div class="hulu">
+                        <img src="./assets/images/hulu.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 l6 pink row movie">
+                <div class="movie-poster col s3 l3">
+                    <img src="./assets/images/HP-test.jpg" alt="" />
+                </div>
+                <div class="movie-title col s6 l6">
+                    Harry Potter
+                </div>
+                <div class="other-actors col s6 l6">
+                    The other actors are: jdhskfgbndsgbdfkgjlhdbfgbdnfkjhgnbdfgjkidfhnbgjkiudfhngdfijkughndfikgjudhnfgdifkjugnhdfkjugndhfgikjudf
+                </div>
+                <div class="streaming-services col s3 l3">
+                    <div class="disney+">
+                        <img src="./assets/images/disney.jpg" alt="" />
+                    </div>
+                    <div class="hbo-max">
+                        <img src="./assets/images/hbo.jpg" alt="" />
+                    </div>
+                    <div class="hulu">
+                        <img src="./assets/images/hulu.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+You have no unread notifications
