@@ -2,22 +2,17 @@
 
 Created by: Brandon Davis, Maximillian Kottong, John Reed, Alex Rodriguez, and Jamie Thomason
 
-[Deployed Stream Connect Site Link] ()
+[Deployed Stream Connect Site Link]()
 
 ## Description
 
-* An app that allows users to look up their favorite movies and/or actors and see which streaming services offer the movie(s).
+An app that allows users to look up their favorite movies and/or actors and see which streaming services offer the movie(s).
 
 ## User Story
 
-AS A movie lover
-I WANT to be able to look up my favorite movies/actors to see which streaming services are hosting their movies
+> AS A movie lover <br>
+I WANT to be able to look up my favorite movies/actors to see which streaming services are hosting their movies <br>
 SO THAT I can spend less time browsing for movies
-
-## Creation Process
-
-1. Group brainstormed idea and selected relevant APIs.
-2. 
 
 ## APIs Used
 
