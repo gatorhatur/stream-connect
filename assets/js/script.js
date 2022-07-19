@@ -18,12 +18,9 @@ const providers = [
 ]
 
 let movies = [];
-<<<<<<< HEAD
 var actorId = ""
-=======
 let isActor = true;
 
->>>>>>> 6e64cb9d6cb5b2d6c7eaeb2042a07656835da960
 
 console.log("Script files is working");
 
@@ -39,7 +36,6 @@ $(document).ready(function(){
     $('.tabs').tabs();
   });
 
-<<<<<<< HEAD
 //Search Actor API
 
 var searchActorName = function (name) {
@@ -51,22 +47,19 @@ var searchActorName = function (name) {
 
 
 //moved then up to json see commented out portion
- fetch(actorName).then(function(res) {
-        res.json().then(function(data) {
-          //console.log(data.results[0].id);
-          actorId = data.results[0].id;
-  })
-      })//.then(function(data) {
+ return fetch(actorName).then(function(res) {
+        return res.json();
+      }).then(function(data) {
         //console.log(data.results[0].id);
-       // actorId = data.results[0].id;
-//})
-.catch (function(err) {
-  console.log(err);
-})
+        actorId = data.results[0].id;
+        return actorId;
+      })//.then(function(data) {
+      .catch (function(err) {
+        console.log(err);
+      })
   
 
 };
-=======
 
 var getMovieId = function (id) {
   const apiUrl = "https://api.themoviedb.org/3/discover/movie?api_key="+tmdbApiKey+"&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_people="+id+"&with_watch_monetization_types=flatrate"
@@ -139,4 +132,3 @@ $(".switch").on("change", function (event) {
 
 getMovieInfo();
 
->>>>>>> 6e64cb9d6cb5b2d6c7eaeb2042a07656835da960
