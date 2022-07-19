@@ -44,7 +44,7 @@ var searchActorName = function (name) {
 
 
 //moved then up to json see commented out portion
- return fetch(actorName).then(function(res) {
+fetch(actorName).then(function(res) {
         return res.json();
       }).then(function(data) {
         //console.log(data.results[0].id);
