@@ -19,6 +19,7 @@ const providers = [
 
 let movies = [];
 
+var test;
 
 console.log("Script files is working");
 
@@ -45,7 +46,7 @@ var getMovieId = function (id) {
   fetch(apiUrl).then(function (response) {
     if (response.ok) {
       response.json().then(function (data) {
-        console.log(data);
+        console.log("Here is data",data);
         //iterate through each element and set data // will need to solve for limits
         data.results.forEach(function (element, index) {
 
@@ -85,16 +86,13 @@ var getMovieInfo = function (movieId) {
     fetch(movieInfo, options)
       .then(response => {
         if (!response.ok) { 
-          if (response.status === 429) {
-            return console.log(response.error)
-          }
-          console.log("Something went wrong");
-          return console.log(response);
+            throw Error(response.text());
+            console.log("Something went wrong");
          }
         return response.json()
       })
       .then((data) => {
-        console.log(data);
+        console.log();
             //console.log(data.cast);
             //console.log(data.streamingInfo);
 
@@ -104,7 +102,10 @@ var getMovieInfo = function (movieId) {
           console.log(cast, streamingInfo);
             return (cast, streamingInfo);
         })
-      .catch(err => console.error(err));
+      .catch(err => {
+        err = JSON.parse(err);
+        console.error(err)
+      });
 }
 
 var sleep = function(ms){
@@ -114,10 +115,18 @@ var sleep = function(ms){
 var waitForMovieInfo = async function (movieId) {
 
   await sleep(400);
-  await getMovieInfo(movieId);
-  
+  var data = await getMovieInfo(movieId);
+  return data;
   //console.log(result);
 }
+
+movies.forEach(function (element,index) {
+  var data = waitForMovieInfo(element.id)
+  movies[index].streams = data[1];
+  movies[index].overview = data[0];
+})
+
+
 
 //getMovieInfo();
 
