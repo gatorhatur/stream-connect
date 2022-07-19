@@ -14,6 +14,74 @@ const providers = [
     {
         name: "amazon prime",
         logo_path: "/emthp39XA2YScoYL1p0sdbAH2WA.jpg"
+    },
+    {
+        name: "hotstar",
+        logo_path: "/7Fl8ylPDclt3ZYgNbW2t7rbZE9I.jpg"
+    },
+    {
+        name: "disney plus",
+        logo_path: "/v8vA6WnPVTOE1o39waNFVmAqEJj.jpg"
+    },
+    {
+        name: "hbo max",
+        logo_path: "/Ajqyt5aNxNGjmF9uOfxArGrdf3X.jpg"
+    },
+    {
+        name: "peacock",
+        logo_path: "/8VCV78prwd9QzZnEm0ReO6bERDa.jpg"
+    },
+    {
+        name: "paramount plus",
+        logo_path: "/xbhHHa1YgtpwhC8lb1NQ3ACVcLd.jpg"
+    },
+    {
+        name: "starz",
+        logo_path: "/zVJhpmIEgdDVbDt5TB72sZu3qdO.jpg"
+    },
+    {
+        name: "showtime",
+        logo_path: "/4kL33LoKd99YFIaSOoOPMQOSw1A.jpg"
+    },
+    {
+        name: "apple tv plus",
+        logo_path: "/6uhKBfmtzFqOcLousHwZuzcrScK.jpg"
+    },
+    {
+        name: "mubi",
+        logo_path: "/bVR4Z1LCHY7gidXAJF5pMa4QrDS.jpg"
+    },
+    {
+        name: "stan",
+        logo_path: "/rDd7IEBnJB0gPagFvagP1kK3pDu.jpg"
+    },
+    {
+        name: "now",
+        logo_path: "/cQQYtdaCg7vDo28JPru4v8Ypi8x.jpg"
+    },
+    {
+        name: "crave",
+        logo_path: "/gJ3yVMWouaVj6iHd59TISJ1TlM5.jpg"
+    },
+    {
+        name: "all 4",
+        logo_path: "/kJ9GcmYk5zJ9nJtVX8XjDo9geIM.jpg"
+    },
+    {
+        name: "bbc iplayer",
+        logo_path: "/zY5SmHyAy1CoA3AfQpf58QnShnw.jpg"
+    },
+    {
+        name: "britbox",
+        logo_path: "/aGIS8maihUm60A3moKYD9gfYHYT.jpg"
+    },
+    {
+        name: "zee5",
+        logo_path: "/ajbCmwvZ8HiePHZaOVEgm9MzyuA.jpg"
+    },
+    {
+        name: "curiosity stream",
+        logo_path: "/67Ee4E6qOkQGHeUTArdJ1qRxzR2.jpg"
     }
 ]
 
