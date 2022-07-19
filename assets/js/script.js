@@ -142,7 +142,13 @@ getMovieInfo();
 //Save Search Values
 
 var saveSearch = function (search) {
-  searchArray.push(search);
+  
+  var searchObj = {
+    search: $(search).text(),
+    isActor: $(search).attr("data-isActor")
+  };
+
+  searchArray.push(searchObj);
   localStorage.setItem("searchName", JSON.stringify(searchArray));
 };
 
@@ -157,7 +163,7 @@ var loadSearch = function () {
 
 var buttonCreator = function (saveData) {
 
-  buttonStorage.innerHTML = "";
+  historySection.innerHTML = "";
   if (saveData.length > 0) {
       for (let i = 0; i < saveData.length; i++) {
           const element = saveData[i];
