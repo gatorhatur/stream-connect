@@ -1,3 +1,8 @@
+var searchInput = document.querySelector("#search_input");
+var searchArray = [];
+var searchName = "";
+var historySection = document.querySelector("#history-container");
+
 
 const tmdbApiKey = "346f7b7cb4a8eacfd5f60caf07af955f";
 const rapidApiKey = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
@@ -132,3 +137,39 @@ $(".switch").on("change", function (event) {
 
 getMovieInfo();
 
+//Populate Search History under History Tab- track what the search input was, if actor was true or false (was it an actor or movie search)
+
+//Save Search Values
+
+var saveSearch = function (search) {
+  searchArray.push(search);
+  localStorage.setItem("searchName", JSON.stringify(searchArray));
+};
+
+//Load Search Value (color-code button for actor v. movie??)
+
+var loadSearch = function () {
+  searchArray = JSON.parse(localStorage.getItem("searchName"));
+  buttonCreator(searchArray);
+};
+
+//Storage of History
+
+var buttonCreator = function (saveData) {
+
+  buttonStorage.innerHTML = "";
+  if (saveData.length > 0) {
+      for (let i = 0; i < saveData.length; i++) {
+          const element = saveData[i];
+          var button = document.createElement("button");
+          button.textContent = saveData[i];
+          historySection.appendChild(button);
+          button.onclick = function() {
+              searchName = saveData[i];
+              getActorInfo(saveData[i]);
+              getMovieInfo(saveData[i]);
+          }
+      }
+  }
+
+};
