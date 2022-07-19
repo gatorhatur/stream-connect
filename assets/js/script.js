@@ -1,9 +1,10 @@
+
 var tmdbApiKey = "346f7b7cb4a8eacfd5f60caf07af955f";
 var rapidApiKey = "<<4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81>>";
-var userInputContainer = document.getElementsByClassName("input-field");
-var MovieTitleEl = document.getElementById("search-input");
+var movieTitleContainer = document.getElementById("movie-title-container");
+var movieTitle = document.getElementById("movie-title")
 var movies = []
-
+var userInputContainer = $("nav");
 
 
 
@@ -26,6 +27,9 @@ fetch(apiUrl).then(function(response){
       }
       
       movies.push(movieObj);
+      console.log(movieObj);
+      console.log(movieObj.title, movieObj.id);
+
     })
   })
 });
@@ -45,21 +49,43 @@ if (searchInputForm) {
   alert("please enter a movie title");
 }
 console.log(event);
+
+
+$("#search_input").val("");
 }
 
 //Create a function to accept array of information and movie title parameter
 var displayMovies = function(title){
-console.log(title);
+response.json().then(function(movieObj){
+  displayMovies(movieObj, title);
+})
 //clear old content
-userInputContainer.textContent = "";
-MovieTitleEl.textContent = searchTerm;
+movieTitleContainer.textContent = "";
+movieTitle.textContent = title;
 //looper over movies
-// for (var i = 0; i <title.length; i++){
-  
-// }
+for (var i = 0; i <title.length; i++){
+//format movie name
+var movieName = movieObj[i].title. 
+
+//create movie title header container
+var movieContainer = document.createElement("div");
+movieContainer.classList = "align-center";
+
+//create a span element to hold movie name
+var movieNameEl = document.createElement("span");
+movieNameEl.textContent = title;
+
+//append to container
+movieContainer.appendChild(movieNameEl);
+
+//apend container to the DOM
+movieTitleContainer.appendChild()
+}
 movies.forEach(function(element){
 
+  
 })
 };
 
-userInputContainer.addEventListener("click", submitHandler);
+// userInputContainer.addEventListener("click", submitHandler);
+$("nav").on("click", submitHandler);
