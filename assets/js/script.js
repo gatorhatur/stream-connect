@@ -116,20 +116,47 @@ var sleep = function(ms){
 var waitForMovieInfo = async function (movieId) {
 
   await sleep(400);
-  getMovieInfo(movieId).then((result) => { return result });
+  await getMovieInfo(movieId);
   
   //console.log(result);
 }
 
-
+for await (const element of movies) {
+    
+}
 // movies.forEach(function (element,index) {
  //   if(index > moviePullLimit-1){return}
-//   var data = waitForMovieInfo(element.id).then((result) => {return result})
-//   movies[index].streams = data[1];
-//   movies[index].overview = data[0];
-// })
+//   var data = waitForMovieInfo(element.id)
+console.
+  //   movies[index].streams = data[1];
+  //   movies[index].overview = data[0];
+  // })
 
 
 
-//getMovieInfo();
+  //getMovieInfo();
+
+  //handler
+
+  $().on("click", async function () {
+
+
+    var input = $("#search_input").text();
+
+    //generate history tab
+
+    if (isActor) {
+      const a = await searchActorName(input);
+      const m = await getMovieId(actorId);
+    }
+    else {
+      const m = await getMovieId(input);
+    }
+        
+    await getAllMovieInfo()
+
+    movies.forEach(functon(element){
+      //dynamic generation of data
+    })
+  });
 
