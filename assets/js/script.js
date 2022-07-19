@@ -1,7 +1,8 @@
 
 const tmdbApiKey = "346f7b7cb4a8eacfd5f60caf07af955f";
 const rapidApiKey = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
-const moviePullLimit = 5;
+//const rapidApiKey = "0b54f54be9mshd283a791dd6a7cep1ff786jsncc5470d7f2a8";
+const moviePullLimit = 9;
 const providers = [
     {
         name: "netflix",
@@ -69,7 +70,7 @@ var getMovieId = function (id) {
   })
 }
 
-var getMovieInfo = function (movieId) {
+var getMovieInfo = async function (movieId) {
     const options = {
         method: 'GET',
         headers: {
@@ -82,11 +83,9 @@ var getMovieInfo = function (movieId) {
     //var movieId = "120";
 
     var movieInfo = "https://streaming-availability.p.rapidapi.com/get/basic?country=us&tmdb_id=movie%2F" + movieId + "&output_language=en";
-
-    fetch(movieInfo, options)
+    var results = await fetch(movieInfo, options)
       .then(response => {
         if (!response.ok) { 
-            throw Error(response.text());
             console.log("Something went wrong");
          }
         return response.json()
@@ -106,6 +105,8 @@ var getMovieInfo = function (movieId) {
         err = JSON.parse(err);
         console.error(err)
       });
+  console.log(results);
+  return results;
 }
 
 var sleep = function(ms){
@@ -115,16 +116,18 @@ var sleep = function(ms){
 var waitForMovieInfo = async function (movieId) {
 
   await sleep(400);
-  var data = await getMovieInfo(movieId);
-  return data;
+  getMovieInfo(movieId).then((result) => { return result });
+  
   //console.log(result);
 }
 
-movies.forEach(function (element,index) {
-  var data = waitForMovieInfo(element.id)
-  movies[index].streams = data[1];
-  movies[index].overview = data[0];
-})
+
+// movies.forEach(function (element,index) {
+ //   if(index > moviePullLimit-1){return}
+//   var data = waitForMovieInfo(element.id).then((result) => {return result})
+//   movies[index].streams = data[1];
+//   movies[index].overview = data[0];
+// })
 
 
 
