@@ -44,18 +44,16 @@ var searchActorName = function (name) {
 
 
 //moved then up to json see commented out portion
- fetch(actorName).then(function(res) {
-        res.json().then(function(data) {
-          //console.log(data.results[0].id);
-          actorId = data.results[0].id;
-  })
-      })//.then(function(data) {
+ return fetch(actorName).then(function(res) {
+        return res.json();
+      }).then(function(data) {
         //console.log(data.results[0].id);
-       // actorId = data.results[0].id;
-//})
-.catch (function(err) {
-  console.log(err);
-})
+        actorId = data.results[0].id;
+        return actorId;
+      })//.then(function(data) {
+      .catch (function(err) {
+        console.log(err);
+      })
   
 
 };
