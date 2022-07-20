@@ -6,7 +6,11 @@ var movieTitle = document.getElementById("movie-title")
 var movies = []
 var userInputContainer = $("nav");
 
-
+console.log("Script files is working");
+//initialize tabs
+$(document).ready(function(){
+    $('.tabs').tabs();
+  }); 
 
 var getMovie = function(movieSting){
   // format the github api Url
