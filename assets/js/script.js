@@ -92,8 +92,9 @@ var submitHandler = async function(event) {
   var searchString = $("#search_input").val()
   //check to see if there is input in searcbox, if not pormpt please enter a movie title
   if (!searchString) {
-    $('.modal-content').html("<h4>Input Error!</h4><p>Please input a valid Actor or Movie in the search field.</p><p>Example inputs are: Tom Cruise, Harry Potter, Bradley Cooper.");
-    modalInstance = M.Modal.init(elems, { dismissible: false });
+    // $('.modal-content').html("<h4>Input Error!</h4><p>Please input a valid Actor or Movie in the search field.</p><p>Example inputs are: Tom Cruise, Harry Potter, Bradley Cooper.");
+    // modalInstance = M.Modal.init(elems, { dismissible: false });
+    triggerModal("Please input a valid Actor or Movie in the search field.</p><p>Example inputs are: Tom Cruise, Harry Potter, Bradley Cooper.");
     return;
   }
     
@@ -286,6 +287,12 @@ $(".switch").on("change", function (event) {
 //         modalInstance = M.Modal.init(elems, { dismissible: false });
 //     }
 // })
+
+var triggerModal = function (message) {
+  message = "<h4>Oops! Something went wrong!</h4><p>" + message;
+  $('.modal-content').html(message);
+    modalInstance = M.Modal.init(elems, { dismissible: false });
+}
 
 var elems = document.querySelector('.modal');
 
