@@ -55,38 +55,5 @@ console.log(event);
 
 }}
 
-//Create a function to accept array of information and movie title parameter
-var displayMovies = function(title){
-response.json().then(function(movieObj){
-  displayMovies(movieObj, title);
-})
-//clear old content
-movieTitleContainer.textContent = "";
-movieTitle.textContent = title;
-//looper over movies
-// for (var i = 0; i <title.length; i++){
-// //format movie name
-// var movieName = movieObj[i].title. 
-
-// // //create movie title header container
-// // var movieContainer = document.createElement("div");
-// // movieContainer.classList = "align-center";
-
-// //create a span element to hold movie name
-// var movieNameEl = document.createElement("span");
-// movieNameEl.textContent = title;
-
-// //append to container
-// movieContainer.appendChild(movieNameEl);
-
-// //apend container to the DOM
-// movieTitleContainer.appendChild()
-// }
-// movies.forEach(function(element){
-
-  
-// })
-};
-
 // userInputContainer.addEventListener("click", submitHandler);
 $("nav").on("click", submitHandler);
