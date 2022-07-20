@@ -84,35 +84,38 @@ fetch(apiUrl).then(function(response){
 var submitHandler = async function(event) {
   //console.log($(event.target).attr("data-isActor"));
   //if the target is the search button
-  if ($(event.target).hasClass("btn")) {
+if ($(event.target).hasClass("btn")) {
     //get value from input element
-    var searchString = $("#search_input").val()
-//check to see if there is input in searcbox, if not pormpt please enter a movie title
+  var searchString = $("#search_input").val()
+  //check to see if there is input in searcbox, if not pormpt please enter a movie title
   if (!searchString) {
-    alert("please enter a movie title");
-    return;
-    }
-    
-
-    $("#search_input").val("");
-}
-else if ($(event.target).attr("data-isActor")) { //if the target has the data-isActor attribute
-    isActor = $(event.target).attr("data-isActor");
-    var searchString = $(event.target).text();
-}
-else {
-    return;
+    return alert("please enter a movie title");  
   }
- 
-  console.log(isActor);
-if (isActor) { 
-  await searchActorName(searchString);
-  let results = await getMovieId(actorId);
+    
+  $("#search_input").val("");
+}
+else if ($(event.target).hasClass("history")) { //if the target has the data-isActor attribute
+    var isActor = $(event.target).attr("data-isActor");
+    var searchString = $(event.target).text();
+    console.log("using history");
 }
 else {
+    return;
+}
+ 
+
+if (isActor.toString() === 'true') { 
+    console.log("searching by actor name");
+  await searchActorName(searchString);
+  await getMovieId(actorId);
+}
+else {
+  console.log("searching by movie name")
   await getMovie(searchString);
 }
-  getAllMovieInfo();
+  await getAllMovieInfo();
+
+  return;
 
 }
 
@@ -154,7 +157,7 @@ var getMovieId = function (id) {
   fetch(apiUrl).then(function (response) {
     if (response.ok) {
       response.json().then(function (data) {
-        console.log(data);
+        //console.log(data);
         //iterate through each element and set data // will need to solve for limits
         data.results.forEach(function (element, index) {
 
@@ -194,8 +197,8 @@ var getMovieInfo = function (movieId,index) {
     fetch(movieInfo, options)
         .then(response => response.json())
         .then((data) => {
-            console.log(data.cast);
-            console.log(data.streamingInfo);
+            //console.log(data.cast);
+            //console.log(data.streamingInfo);
 
             var cast = data.cast;
             var streamingInfo = data.streamingInfo;
@@ -211,7 +214,7 @@ var getMovieInfo = function (movieId,index) {
 var getAllMovieInfo = async function () {
   var startIndex = page * moviePullLimit - moviePullLimit;
   var constraint = moviePullLimit * page;
-  console.log(startIndex, constraint);
+  //console.log(startIndex, constraint);
   
   for (var i = startIndex; i < constraint; i++){
     await getMovieInfo(movies[i].id, i);
