@@ -1,7 +1,5 @@
-
 var movieTitleContainer = document.getElementById("movie-title-container");
 var movieTitle = document.getElementById("movie-title")
-
 
 const tmdbApiKey = "346f7b7cb4a8eacfd5f60caf07af955f";
 const rapidApiKey = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
@@ -51,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
 //initialize tabs
 $(document).ready(function(){
     $('.tabs').tabs();
-
   }); 
 
 var getMovie = function (movieSting) {
