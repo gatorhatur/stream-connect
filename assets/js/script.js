@@ -86,18 +86,8 @@ fetch(apiUrl).then(function(response){
 var submitHandler = async function(event) {
   //console.log($(event.target).attr("data-isActor"));
   //if the target is the search button
-if ($(event.target).hasClass("btn")) {
-    //get value from input element
-  var searchString = $("#search_input").val()
-  //check to see if there is input in searcbox, if not pormpt please enter a movie title
-  if (!searchString) {
-    return alert("please enter a movie title");  
-  }
-    
-  $("#search_input").val("");
-  //insert history function here
-}
-else if ($(event.target).hasClass("history")) { //if the target has the data-isActor attribute
+
+if ($(event.target).hasClass("history")) { //if the target has the data-isActor attribute
     var isActor = $(event.target).attr("data-isActor");
     var searchString = $(event.target).text();
     console.log("using history");
@@ -271,6 +261,32 @@ $(".switch").on("change", function (event) {
   else {
     isActor = 'true';
   }
+})
+
+var modalInstance;
+
+$('.search-btn').on('click', function () {
+    if ($('#search_input').val().length >= 1) {
+        console.log($('#search_input').val().length)
+        return;
+    } else {
+        console.log('else')
+        $('.modal-content').html("<h4>Input Error!</h4><p>Please input a valid Actor or Movie in the search field.</p><p>Example inputs are: Tom Cruise, Harry Potter, Bradley Cooper.");
+        modalInstance = M.Modal.init(elems, { dismissible: false });
+    }
+})
+
+var elems = document.querySelector('.modal');
+
+$('#exit-modal').on('click', function () {
+    console.log(modalInstance)
+    modalInstance.destroy();
+    if (isActor) {
+        isActor = 'false';
+    }
+    else {
+        isActor = 'true';
+    }
 })
 
 
