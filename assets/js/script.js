@@ -153,7 +153,7 @@ var searchActorName = async function (name) {
         actorId = data.results[0].id;
       })//.then(function(data) {
       .catch (function(err) {
-        console.log(err);
+        triggerModal(err);
       })
   
 
@@ -191,7 +191,7 @@ var getMovieId = function (id) {
     }
     else {
       //trigger modal
-      console.log("Response no ok");
+      triggerModal("Something is wrong with the connection. Please try again later");
     }
   })
 }
@@ -224,7 +224,7 @@ var getMovieInfo = function (movieId,index) {
 
           updateStreamInfo(index);
         })
-        .catch(err => console.error(err));
+        .catch(err => triggerModal(err));
 }
 
 var getAllMovieInfo = async function () {
