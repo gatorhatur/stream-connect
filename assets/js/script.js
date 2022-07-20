@@ -36,7 +36,7 @@ const imageBaseUrl = "https://image.tmdb.org/t/p/original";
 
 let movies = [];
 var actorId = ""
-let isActor = true;
+let isActor = 'true';
 let page = 1;
 
 console.log("Script files is working");
@@ -107,7 +107,7 @@ else {
 }
  
 
-if (isActor.toString() === 'true') { 
+if (isActor === 'true') { 
     console.log("searching by actor name");
   await searchActorName(searchString);
   console.log("finished searching for actor");
@@ -266,10 +266,10 @@ var updateStreamInfo = function (index) {
 
 $(".switch").on("change", function (event) {
   if (isActor) {
-    isActor = false;
+    isActor = 'false';
   }
   else {
-    isActor = true;
+    isActor = 'true';
   }
 })
 
