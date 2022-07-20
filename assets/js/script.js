@@ -1,7 +1,6 @@
-
 var movieTitleContainer = document.getElementById("movie-title-container");
 var movieTitle = document.getElementById("movie-title")
-
+var modalInstance;
 
 const tmdbApiKey = "346f7b7cb4a8eacfd5f60caf07af955f";
 const rapidApiKey = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
@@ -51,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
 //initialize tabs
 $(document).ready(function(){
     $('.tabs').tabs();
-
   }); 
 
 var getMovie = function (movieSting) {
@@ -83,15 +81,21 @@ fetch(apiUrl).then(function(response){
 }
 // getMovie();
 
+
+
 var submitHandler = async function(event) {
   //console.log($(event.target).attr("data-isActor"));
   //if the target is the search button
-if ($(event.target).hasClass("btn")) {
+
+  if ($(event.target).hasClass("btn")) {
     //get value from input element
   var searchString = $("#search_input").val()
   //check to see if there is input in searcbox, if not pormpt please enter a movie title
   if (!searchString) {
-    return alert("please enter a movie title");  
+    // $('.modal-content').html("<h4>Input Error!</h4><p>Please input a valid Actor or Movie in the search field.</p><p>Example inputs are: Tom Cruise, Harry Potter, Bradley Cooper.");
+    // modalInstance = M.Modal.init(elems, { dismissible: false });
+    triggerModal("Please input a valid Actor or Movie in the search field.</p><p>Example inputs are: Tom Cruise, Harry Potter, Bradley Cooper.");
+    return;
   }
     
   $("#search_input").val("");
@@ -149,7 +153,7 @@ var searchActorName = async function (name) {
         actorId = data.results[0].id;
       })//.then(function(data) {
       .catch (function(err) {
-        console.log(err);
+        triggerModal(err);
       })
   
 
@@ -187,7 +191,7 @@ var getMovieId = function (id) {
     }
     else {
       //trigger modal
-      console.log("Response no ok");
+      triggerModal("Something is wrong with the connection. Please try again later");
     }
   })
 }
@@ -220,7 +224,7 @@ var getMovieInfo = function (movieId,index) {
 
           updateStreamInfo(index);
         })
-        .catch(err => console.error(err));
+        .catch(err => triggerModal(err));
 }
 
 var getAllMovieInfo = async function () {
@@ -271,6 +275,29 @@ $(".switch").on("change", function (event) {
   else {
     isActor = 'true';
   }
+})
+
+
+//moved this up inside the main submit handler
+// $('.search-btn').on('click', function () {
+//     if ($('#search_input').val().length >= 1) {
+//         return;
+//     } else {
+//         $('.modal-content').html("<h4>Input Error!</h4><p>Please input a valid Actor or Movie in the search field.</p><p>Example inputs are: Tom Cruise, Harry Potter, Bradley Cooper.");
+//         modalInstance = M.Modal.init(elems, { dismissible: false });
+//     }
+// })
+
+var triggerModal = function (message) {
+  message = "<h4>Oops! Something went wrong!</h4><p>" + message;
+  $('.modal-content').html(message);
+    modalInstance = M.Modal.init(elems, { dismissible: false });
+}
+
+var elems = document.querySelector('.modal');
+
+$('#exit-modal').on('click', function () {
+    modalInstance.destroy();
 })
 
 
