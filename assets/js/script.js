@@ -64,28 +64,28 @@ response.json().then(function(movieObj){
 movieTitleContainer.textContent = "";
 movieTitle.textContent = title;
 //looper over movies
-// for (var i = 0; i <title.length; i++){
-// //format movie name
-// var movieName = movieObj[i].title. 
+for (var i = 0; i <title.length; i++){
+//format movie name
+var movieName = movieObj[i].title. 
 
-// // //create movie title header container
-// // var movieContainer = document.createElement("div");
-// // movieContainer.classList = "align-center";
+// //create movie title header container
+var movieContainer = document.createElement("div");
+movieContainer.classList = "align-center";
 
-// //create a span element to hold movie name
-// var movieNameEl = document.createElement("span");
-// movieNameEl.textContent = title;
+//create a span element to hold movie name
+var movieNameEl = document.createElement("span");
+movieNameEl.textContent = title;
 
-// //append to container
-// movieContainer.appendChild(movieNameEl);
+//append to container
+movieContainer.appendChild(movieNameEl);
 
-// //apend container to the DOM
-// movieTitleContainer.appendChild()
-// }
-// movies.forEach(function(element){
+//apend container to the DOM
+movieTitleContainer.appendChild()
+}
+movies.forEach(function(element){
 
   
-// })
+})
 };
 
 // userInputContainer.addEventListener("click", submitHandler);
