@@ -195,7 +195,7 @@ $('.search-btn').on('click', function () {
         return;
     } else {
         console.log('else')
-        $('.modal-content').html("<h4>Error!</h4><p>Please input a valid Actor or Movie in the search field</p>");
+        $('.modal-content').html("<h4>Input Error!</h4><p>Please input a valid Actor or Movie in the search field.</p><p>Example inputs are: Tom Cruise, Harry Potter, Bradley Cooper.");
         modalInstance = M.Modal.init(elems, { dismissible: false });
     }
 })
