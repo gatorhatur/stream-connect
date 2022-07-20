@@ -75,36 +75,49 @@ fetch(apiUrl).then(function(response){
       movies.push(movieObj);
       console.log(movieObj);
       console.log(movieObj.title, movieObj.id);
-
     })
   })
 });
 }
 // getMovie();
 
-var submitHandler = function(event) {
-  console.log(event);
-  //is this the search button, 
-if ($(event.target).hasClass("btn")){
-//get value from input element
- var searchInputForm = $("#search_input").val()
+var submitHandler = async function(event) {
+  //console.log($(event.target).attr("data-isActor"));
+  //if the target is the search button
+  if ($(event.target).hasClass("btn")) {
+    //get value from input element
+    var searchString = $("#search_input").val()
 //check to see if there is input in searcbox, if not pormpt please enter a movie title
-if (searchInputForm) {
-  getMovie(searchInputForm);
-  textInput.value = "";
-} else{
-  alert("please enter a movie title");
+  if (!searchString) {
+    alert("please enter a movie title");
+    return;
+    }
+    
+
+    $("#search_input").val("");
 }
-console.log(event);
+else if ($(event.target).attr("data-isActor")) { //if the target has the data-isActor attribute
+    isActor = $(event.target).attr("data-isActor");
+    var searchString = $(event.target).text();
+}
+else {
+    return;
+  }
+ 
+  console.log(isActor);
+if (isActor) { 
+  await searchActorName(searchString);
+  let results = await getMovieId(actorId);
+}
+else {
+  await getMovie(searchString);
+}
+  getAllMovieInfo();
 
-
-
-}}
+}
 
 // userInputContainer.addEventListener("click", submitHandler);
-$("nav").on("click", submitHandler);
-  
-  });
+$("nav").on("click", submitHandler)
 
 //Search Actor API
 
@@ -113,7 +126,7 @@ var searchActorName = function (name) {
   actorId = "";
 
   var actorName = "https://api.themoviedb.org/3/search/person?api_key=346f7b7cb4a8eacfd5f60caf07af955f&language=en-US&query=" + encodeURI(name) + "&page=1&include_adult=false";
-  console.log(actorName);
+  //console.log(actorName);
 
 
 //moved then up to json see commented out portion
@@ -154,6 +167,7 @@ var getMovieId = function (id) {
           }
           
           movies.push(movieObj);
+          return;
         })
       })
     }
@@ -242,5 +256,4 @@ $(".switch").on("change", function (event) {
   }
 })
 
-getMovieInfo();
 
