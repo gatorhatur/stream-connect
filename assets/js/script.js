@@ -267,10 +267,8 @@ var modalInstance;
 
 $('.search-btn').on('click', function () {
     if ($('#search_input').val().length >= 1) {
-        console.log($('#search_input').val().length)
         return;
     } else {
-        console.log('else')
         $('.modal-content').html("<h4>Input Error!</h4><p>Please input a valid Actor or Movie in the search field.</p><p>Example inputs are: Tom Cruise, Harry Potter, Bradley Cooper.");
         modalInstance = M.Modal.init(elems, { dismissible: false });
     }
@@ -279,14 +277,7 @@ $('.search-btn').on('click', function () {
 var elems = document.querySelector('.modal');
 
 $('#exit-modal').on('click', function () {
-    console.log(modalInstance)
     modalInstance.destroy();
-    if (isActor) {
-        isActor = 'false';
-    }
-    else {
-        isActor = 'true';
-    }
 })
 
 
