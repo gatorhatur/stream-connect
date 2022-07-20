@@ -8,9 +8,9 @@ var userInputContainer = $("nav");
 
 
 
-var getMovie = function(){
+var getMovie = function(movieSting){
   // format the github api Url
-  var apiUrl = "https://api.themoviedb.org/3/search/movie?api_key=" + tmdbApiKey + "&language=en-US&query=The%20avengers&page=1&include_adult=false";
+  var apiUrl = "https://api.themoviedb.org/3/search/movie?api_key=" + tmdbApiKey + "&language=en-US&query=" + encodeURI(movieSting) + "&page=1&include_adult=false";
 // make a request to the url
 fetch(apiUrl).then(function(response){
   response.json().then(function(data){
@@ -34,13 +34,14 @@ fetch(apiUrl).then(function(response){
   })
 });
 }
-getMovie();
+// getMovie();
 
 var submitHandler = function(event) {
-  event.preventDefault();
   console.log(event);
+  //is this the search button, 
+if ($(event.target).hasClass("btn")){
 //get value from input element
-var searchInputForm = textInput.value.trim();
+ var searchInputForm = $("#search_input").val()
 //check to see if there is input in searcbox, if not pormpt please enter a movie title
 if (searchInputForm) {
   getMovie(searchInputForm);
@@ -51,8 +52,8 @@ if (searchInputForm) {
 console.log(event);
 
 
-$("#search_input").val("");
-}
+
+}}
 
 //Create a function to accept array of information and movie title parameter
 var displayMovies = function(title){
@@ -63,28 +64,28 @@ response.json().then(function(movieObj){
 movieTitleContainer.textContent = "";
 movieTitle.textContent = title;
 //looper over movies
-for (var i = 0; i <title.length; i++){
-//format movie name
-var movieName = movieObj[i].title. 
+// for (var i = 0; i <title.length; i++){
+// //format movie name
+// var movieName = movieObj[i].title. 
 
-//create movie title header container
-var movieContainer = document.createElement("div");
-movieContainer.classList = "align-center";
+// // //create movie title header container
+// // var movieContainer = document.createElement("div");
+// // movieContainer.classList = "align-center";
 
-//create a span element to hold movie name
-var movieNameEl = document.createElement("span");
-movieNameEl.textContent = title;
+// //create a span element to hold movie name
+// var movieNameEl = document.createElement("span");
+// movieNameEl.textContent = title;
 
-//append to container
-movieContainer.appendChild(movieNameEl);
+// //append to container
+// movieContainer.appendChild(movieNameEl);
 
-//apend container to the DOM
-movieTitleContainer.appendChild()
-}
-movies.forEach(function(element){
+// //apend container to the DOM
+// movieTitleContainer.appendChild()
+// }
+// movies.forEach(function(element){
 
   
-})
+// })
 };
 
 // userInputContainer.addEventListener("click", submitHandler);
