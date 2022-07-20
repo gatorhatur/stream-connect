@@ -54,13 +54,14 @@ $(document).ready(function(){
 
   }); 
 
-var getMovie = function(movieSting){
+var getMovie = function (movieSting) {
+  console.log("getting movie by name!")
   // format the github api Url
   var apiUrl = "https://api.themoviedb.org/3/search/movie?api_key=" + tmdbApiKey + "&language=en-US&query=" + encodeURI(movieSting) + "&page=1&include_adult=false";
 // make a request to the url
 fetch(apiUrl).then(function(response){
   response.json().then(function(data){
-    console.log(data,);
+    //console.log(data,);
     movies = []
     data.results.forEach(function (element, index) {
 
@@ -73,9 +74,10 @@ fetch(apiUrl).then(function(response){
       }
       
       movies.push(movieObj);
-      console.log(movieObj);
-      console.log(movieObj.title, movieObj.id);
+      //console.log(movieObj);
+      //console.log(movieObj.title, movieObj.id);
     })
+    getAllMovieInfo();
   })
 });
 }
@@ -93,6 +95,7 @@ if ($(event.target).hasClass("btn")) {
   }
     
   $("#search_input").val("");
+  //insert history function here
 }
 else if ($(event.target).hasClass("history")) { //if the target has the data-isActor attribute
     var isActor = $(event.target).attr("data-isActor");
@@ -107,13 +110,18 @@ else {
 if (isActor.toString() === 'true') { 
     console.log("searching by actor name");
   await searchActorName(searchString);
+  console.log("finished searching for actor");
   await getMovieId(actorId);
+  console.log("finished getting movie ids");
 }
 else {
-  console.log("searching by movie name")
   await getMovie(searchString);
+  console.log("finished searching by movie name")
 }
-  await getAllMovieInfo();
+  // await getAllMovieInfo();
+  // console.log("all data is read!");
+
+  //insert dynamic data generattion code
 
   return;
 
@@ -124,7 +132,8 @@ $("nav").on("click", submitHandler)
 
 //Search Actor API
 
-var searchActorName = function (name) {
+var searchActorName = async function (name) {
+  console.log("Getting Actor Id!")
   //set actorId to blank
   actorId = "";
 
@@ -133,12 +142,11 @@ var searchActorName = function (name) {
 
 
 //moved then up to json see commented out portion
- return fetch(actorName).then(function(res) {
+ await fetch(actorName).then(function(res) {
         return res.json();
       }).then(function(data) {
         //console.log(data.results[0].id);
         actorId = data.results[0].id;
-        return actorId;
       })//.then(function(data) {
       .catch (function(err) {
         console.log(err);
@@ -148,8 +156,9 @@ var searchActorName = function (name) {
 };
 
 var getMovieId = function (id) {
+  console.log("Getting Ids of movies!");
   const apiUrl = "https://api.themoviedb.org/3/discover/movie?api_key="+tmdbApiKey+"&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_people="+id+"&with_watch_monetization_types=flatrate"
-  console.log(apiUrl);
+  //console.log(apiUrl);
 
   //clear movies in the event of the function being called again
   movies = [];
@@ -170,8 +179,10 @@ var getMovieId = function (id) {
           }
           
           movies.push(movieObj);
-          return;
+          
         })
+
+        getAllMovieInfo();
       })
     }
     else {
@@ -185,7 +196,8 @@ var getMovieInfo = function (movieId,index) {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'f7d7f2fe88msh572b312c212385cp1f28e8jsn8e41ff9814a4',
+            // 'X-RapidAPI-Key': 'f7d7f2fe88msh572b312c212385cp1f28e8jsn8e41ff9814a4',
+            'X-RapidAPI-Key': rapidApiKey,
             'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
         }
     };
@@ -212,11 +224,13 @@ var getMovieInfo = function (movieId,index) {
 }
 
 var getAllMovieInfo = async function () {
+  console.log("Gathering Streaming Info for all movies");
   var startIndex = page * moviePullLimit - moviePullLimit;
   var constraint = moviePullLimit * page;
   //console.log(startIndex, constraint);
   
   for (var i = startIndex; i < constraint; i++){
+    console.log(movies[i].id)
     await getMovieInfo(movies[i].id, i);
   }
 }
