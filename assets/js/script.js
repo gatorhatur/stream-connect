@@ -103,7 +103,7 @@ var getMovieId = function (id) {
         }
         else {
             $('.modal-content').html("<h4>Error!</h4><p>The response did not come back ok, please try again!</p>");
-            modalInstance = M.Modal.init(elems);
+            modalInstance = M.Modal.init(elems, { dismissible: false });
             console.log("Response no ok");
         }
     })
@@ -196,7 +196,7 @@ $('.search-btn').on('click', function () {
     } else {
         console.log('else')
         $('.modal-content').html("<h4>Error!</h4><p>Please input a valid Actor or Movie in the search field</p>");
-        modalInstance = M.Modal.init(elems);
+        modalInstance = M.Modal.init(elems, { dismissible: false });
     }
 })
 
