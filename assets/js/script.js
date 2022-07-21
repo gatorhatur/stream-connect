@@ -330,7 +330,7 @@ var displayMovies = function (title) {
 
   var movieActorsEl = $("<div>")
     .addClass("other-actors col s6 l6")
-    .text(title.overview)
+    .text("Cast: " + title.overview)
   rowEl.append(movieActorsEl);
 
   var streamServicesEl = $("<div>")
