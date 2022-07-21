@@ -3,7 +3,9 @@ var movieTitleContainer = document.getElementById("movie-title-container");
 var movieTitle = document.getElementById("movie-title")
 
 
+
 const tmdbApiKey = "346f7b7cb4a8eacfd5f60caf07af955f";
+const tmdbApiKey2= "07a0e408a6f100177a7ab70946fb580d";
 const rapidApiKey = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
 const moviePullLimit = 3;
 const providers = {
@@ -80,7 +82,7 @@ fetch(apiUrl).then(function(response){
   })
 });
 }
-// getMovie();
+//getMovie();
 
 var submitHandler = function(event) {
   console.log(event);
@@ -109,30 +111,34 @@ response.json().then(function(movieObj){
 //clear old content
 movieTitleContainer.textContent = "";
 movieTitle.textContent = title;
+
 //looper over movies
 for (var i = 0; i < moviePullLimit; i++){
 //format movie name
+var movieNameEl = movieObj[i].title;
 
-
-// //create movie title header container
-var movieContainer = document.createElement("div");
-movieContainer.classList = "align-center";
+//create movie title header container
+ var movieContainer = document.createElement("div");
+ movieContainer.classList = "align-center";
 
 //create a span element to hold movie name
 var movieNameEl = document.createElement("span");
-movieNameEl.textContent = movies[i].title;
+movieNameEl.textContent = movieObj[i].title;
 
 
 //append to container
-movieContainer.appendChild(movieNameEl);
+movieTitle.appendChild(movieNameEl);
 
 //apend container to the DOM
 movieTitleContainer.appendChild()
-}
+
 movies.forEach(function(element){
 
   
 })
+}
+
+
 };
 
 // userInputContainer.addEventListener("click", submitHandler);
