@@ -1,6 +1,10 @@
 var movieTitleContainer = document.getElementById("movie-title-container");
 var movieTitle = document.getElementById("movie-title")
 var modalInstance;
+var searchInput = document.querySelector("#search_input");
+var searchArray = [];
+var searchName = "";
+var historySection = document.querySelector("#history-container");
 
 const tmdbApiKey = "346f7b7cb4a8eacfd5f60caf07af955f";
 const rapidApiKey = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
