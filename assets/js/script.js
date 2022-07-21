@@ -14,10 +14,11 @@ let page = 1;
 
 const tmdbApiKey = "346f7b7cb4a8eacfd5f60caf07af955f";
 const tmdbApiKey2 = "07a0e408a6f100177a7ab70946fb580d";
-const rapidApiKey = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
+const rapidApiKey4 = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
 const rapidApiKey2 = "f7d7f2fe88msh572b312c212385cp1f28e8jsn8e41ff9814a4"
 const rapidApiKey3 = "0b54f54be9mshd283a791dd6a7cep1ff786jsncc5470d7f2a8"
-const moviePullLimit = 1;
+const rapidApiKey = "286e8fd22cmshfc193cfb03b6790p1afd98jsnea4f9d288275"
+const moviePullLimit = 8;
 const imageBaseUrl = "https://image.tmdb.org/t/p/original";
 const providers = {
   netflix: "/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg",
@@ -264,8 +265,8 @@ var submitHandler = async function(event) {
   saveSearch(searchString);
 }
   else if ($(event.target).hasClass("history")) { //if the target has the data-isActor attribute
-    debugger;
-    var isActorH = $(event.target).attr("data-isActor");
+    var temp = isActor;
+    isActor = $(event.target).attr("data-isActor");
     var searchString = $(event.target).text();
     console.log("using history");
 }
@@ -275,7 +276,7 @@ else {
   
   movieContainer.children().remove();
 
-if ((isActor === 'false' && isActorH === 'true') || (isActor === 'true' && isActorH === 'true')) { 
+if (isActor ==='true') { 
   console.log("searching by actor name");
   await searchActorName(searchString);
   console.log("finished searching for actor");
@@ -298,6 +299,9 @@ else {
   //   console.log("I'm display movies now");
   //   displayMovies(movies[i]);
   // }
+  if (temp) {
+    isActor = temp;
+  }
 
   return;
 
@@ -309,7 +313,7 @@ var displayMovies = function (title) {
   console.log("Now Displaying ", title.title);
   
   var rowEl = $("<div>")
-    .addClass("col s12 l6 white row movie")
+    .addClass("col s12 l6 white-text row movie")
   
   var moviePosterEl = $("<div>")
     .addClass("movie-poster col s3 l3");
@@ -327,7 +331,7 @@ var displayMovies = function (title) {
 
   var movieActorsEl = $("<div>")
     .addClass("other-actors col s6 l6")
-    .text(title.overview)
+    .text("Cast: " + title.overview)
   rowEl.append(movieActorsEl);
 
   var streamServicesEl = $("<div>")
@@ -392,7 +396,7 @@ var saveSearch = function (search) {
   console.log(searchObj);
   buttonCreator(searchObj);
   searchArray.push(searchObj);
-  if (searchArray.length > 3) {
+  if (searchArray.length > 14) {
     searchArray.slice(0, 1);
     $(".history:first-child").remove();
   }
