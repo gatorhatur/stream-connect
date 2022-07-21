@@ -109,15 +109,15 @@ var submitHandler = async function(event) {
   saveSearch(searchString);
 }
 else if ($(event.target).hasClass("history")) { //if the target has the data-isActor attribute
-    var isActor = $(event.target).attr("data-isActor");
+    var isActorH = $(event.target).attr("data-isActor");
     var searchString = $(event.target).text();
     console.log("using history");
 }
 else {
     return;
 }
-debugger;
-if (isActor === 'true') { 
+
+if (isActor === 'true' || isActorH === 'true') { 
   console.log("searching by actor name");
   await searchActorName(searchString);
   console.log("finished searching for actor");
@@ -132,13 +132,14 @@ else {
   // await getAllMovieInfo();
   // console.log("all data is read!");
 
-  var startIndex = page * moviePullLimit - moviePullLimit;
-  var constraint = moviePullLimit * page;
-  //console.log(startIndex, constraint);
+  // var startIndex = page * moviePullLimit - moviePullLimit;
+  // var constraint = moviePullLimit * page;
+  // //console.log(startIndex, constraint);
   
-  for (var i = startIndex; i < constraint; i++){
-    displayMovies(movies[i]);
-  }
+  // for (var i = startIndex; i < constraint; i++){
+  //   console.log("I'm display movies now");
+  //   displayMovies(movies[i]);
+  // }
 
   return;
 
@@ -146,6 +147,7 @@ else {
 
 //Create a function to accept array of information and movie title parameter
 var displayMovies = function (title) {
+  console.log("Now Displaying ", title.title);
   
   var rowEl = $("<div>")
     .addClass("col s12 l6 white row movie")
@@ -173,8 +175,10 @@ var displayMovies = function (title) {
     .addClass("streaming-services col s3 l3")
   
   if (title.streams != null) {
-  
-    title.streams.forEach(function (service) {
+    var streamsObj = title.streams
+    console.log(streamsObj);
+
+    streamsObj.forEach(function (service) {
       var streamEl = $("<div>")
         .addClass(service.name)
     
@@ -230,33 +234,80 @@ var getMovieId = function (id) {
   //clear movies in the event of the function being called again
   movies = [];
 
+  // fetch(apiUrl).then(function (response) {
+  //   if (response.ok) {
+  //     response.json().then(async function (data) {
+  //       //console.log(data);
+  //       //iterate through each element and set data // will need to solve for limits
+  //       data.results.forEach( function (element, index) {
+
+  //         var movieObj = {
+  //           title: element.original_title,
+  //           id: element.id,
+  //           poster: element.poster_path,
+  //           overview: element.overview,
+  //           streams: ""
+  //         }
+          
+  //         movies.push(movieObj);
+          
+  //       })
+
+  //       await getAllMovieInfo();
+  //     }).then(() => {
+  //       var startIndex = page * moviePullLimit - moviePullLimit;
+  //       var constraint = moviePullLimit * page;
+  //       //console.log(startIndex, constraint);
+        
+  //       for (var i = startIndex; i < constraint; i++){
+  //         console.log("I'm display movies now");
+  //         displayMovies(movies[i]);
+  //       }
+  //     })
+  //   }
+  //   else {
+  //     //trigger modal
+  //     triggerModal("Something is wrong with the connection. Please try again later");
+  //   }
+  // })
   fetch(apiUrl).then(function (response) {
     if (response.ok) {
-      response.json().then(function (data) {
-        //console.log(data);
-        //iterate through each element and set data // will need to solve for limits
-        data.results.forEach(function (element, index) {
-
-          var movieObj = {
-            title: element.original_title,
-            id: element.id,
-            poster: element.poster_path,
-            overview: element.overview,
-            streams: ""
-          }
-          
-          movies.push(movieObj);
-          
-        })
-
-        getAllMovieInfo();
-      })
+      return response.json()
     }
     else {
       //trigger modal
       triggerModal("Something is wrong with the connection. Please try again later");
     }
-  })
+  }).then(async function (data) {
+    //console.log(data);
+    //iterate through each element and set data // will need to solve for limits
+    data.results.forEach( function (element, index) {
+
+      var movieObj = {
+        title: element.original_title,
+        id: element.id,
+        poster: element.poster_path,
+        overview: element.overview,
+        streams: ""
+      }
+      
+      movies.push(movieObj);
+      
+    })
+
+    await getAllMovieInfo();
+    return;
+  }).then(() => {
+    var startIndex = page * moviePullLimit - moviePullLimit;
+    var constraint = moviePullLimit * page;
+    //console.log(startIndex, constraint);
+    
+    for (var i = startIndex; i < constraint; i++){
+      console.log("I'm display movies now");
+      displayMovies(movies[i]);
+    }
+  }).catch((err) => triggerModal("We ran into a connectivity issue. Please try again later"))
+
 }
 
 var getMovieInfo = function (movieId,index) {
