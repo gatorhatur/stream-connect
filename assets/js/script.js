@@ -6,8 +6,12 @@ var searchArray = [];
 var searchName = "";
 var historySection = $("#history-container");
 
+
 const tmdbApiKey = "346f7b7cb4a8eacfd5f60caf07af955f";
-const rapidApiKey = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
+const tmdbApiKey2 = "07a0e408a6f100177a7ab70946fb580d";
+const rapidApiKey3 = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
+const rapidApiKey2 = "f7d7f2fe88msh572b312c212385cp1f28e8jsn8e41ff9814a4"
+const rapidApiKey = "0b54f54be9mshd283a791dd6a7cep1ff786jsncc5470d7f2a8"
 const moviePullLimit = 3;
 const providers = {
   netflix: "/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg",
@@ -83,7 +87,7 @@ fetch(apiUrl).then(function(response){
   })
 });
 }
-// getMovie();
+//getMovie();
 
 
 
@@ -135,8 +139,48 @@ else {
 
 }
 
+//Create a function to accept array of information and movie title parameter
+var displayMovies = function(title){
+response.json().then(function(movieObj){
+  displayMovies(movieObj, title);
+})
+//clear old content
+movieTitleContainer.textContent = "";
+movieTitle.textContent = title;
+
+//looper over movies
+for (var i = 0; i < moviePullLimit; i++){
+//format movie name
+var movieNameEl = movieObj[i].title;
+
+//create movie title header container
+ var movieContainer = document.createElement("div");
+ movieContainer.classList = "align-center";
+
+//create a span element to hold movie name
+var movieNameEl = document.createElement("span");
+movieNameEl.textContent = movieObj[i].title;
+
+
+//append to container
+movieTitle.appendChild(movieNameEl);
+
+//apend container to the DOM
+movieTitleContainer.appendChild()
+
+movies.forEach(function(element){
+
+  
+})
+}
+
+
+};
+
 // userInputContainer.addEventListener("click", submitHandler);
-$("nav").on("click", submitHandler)
+$("nav").on("click", submitHandler);
+  
+
 
 //Search Actor API
 
@@ -314,6 +358,7 @@ var saveSearch = function (search) {
     search: search,
     isActor: isActor
   };
+  console.log(searchObj);
   buttonCreator(searchObj);
   searchArray.push(searchObj);
   localStorage.setItem("searchName", JSON.stringify(searchArray));
@@ -324,6 +369,10 @@ var saveSearch = function (search) {
 var loadSearch = function () {
   searchArray = JSON.parse(localStorage.getItem("searchName"));
   historySection.children().remove();
+  if (searchArray === null){
+    searchArray = [];
+    return
+  };
   searchArray.forEach(function(element){
     buttonCreator(element);
   });
