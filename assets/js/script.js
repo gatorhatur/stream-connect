@@ -312,7 +312,7 @@ var displayMovies = function (title) {
   console.log("Now Displaying ", title.title);
   
   var rowEl = $("<div>")
-    .addClass("col s12 l6 white row movie")
+    .addClass("col s12 l6 white-text row movie")
   
   var moviePosterEl = $("<div>")
     .addClass("movie-poster col s3 l3");
