@@ -16,13 +16,13 @@ div {
 }
 
 .movie-title {
-    border: 2px solid blue;
+    border: 2px solid black;
     margin-bottom: 2px;
     margin-top: 3px !important;
 }
 
 .other-actors {
-    border: 2px solid blue;
+    border: 2px solid black;
 }
 
 header {
@@ -37,13 +37,50 @@ header {
 
 nav {
     height: 100%;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }
 
 .movie {
     padding: 0 !important;
-    border: 1px solid black;
+    border-left: 11px solid black;
 }
 
 .streaming-services {
     text-align: center;
+}
+
+#movies {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.switch label input[type="checkbox"]:checked + .lever::after {
+    background-color: white !important;
+}
+
+.active {
+    color: white;
+}
+
+.input-field input[type=text]:focus + label {
+    color: #fff !important;
+}
+
+.input-field label {
+    color: #fff !important;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #fff;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #fff !important;
+    box-shadow: 0 1px 0 0 #fff;
+}
+
+#history-container a {
+    display: inline-block;
+    width: 100%;
 }
