@@ -132,4 +132,9 @@ nav {
     nav {
         height: auto;
     }
+
+    .movie {
+        border-left: 5px solid rgb(32, 39, 41);
+        border-right: 5px solid rgb(32, 39, 41);
+    }
 }
