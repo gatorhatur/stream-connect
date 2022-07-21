@@ -331,7 +331,7 @@ var displayMovies = function (title) {
 
   var movieActorsEl = $("<div>")
     .addClass("other-actors col s6 l6")
-    .text(title.overview)
+    .text("Cast: " + title.overview)
   rowEl.append(movieActorsEl);
 
   var streamServicesEl = $("<div>")
@@ -396,7 +396,7 @@ var saveSearch = function (search) {
   console.log(searchObj);
   buttonCreator(searchObj);
   searchArray.push(searchObj);
-  if (searchArray.length > 3) {
+  if (searchArray.length > 14) {
     searchArray.slice(0, 1);
     $(".history:first-child").remove();
   }
