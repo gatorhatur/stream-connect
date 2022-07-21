@@ -395,7 +395,7 @@ var saveSearch = function (search) {
   console.log(searchObj);
   buttonCreator(searchObj);
   searchArray.push(searchObj);
-  if (searchArray.length > 3) {
+  if (searchArray.length > 14) {
     searchArray.slice(0, 1);
     $(".history:first-child").remove();
   }
