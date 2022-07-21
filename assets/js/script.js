@@ -17,7 +17,7 @@ const tmdbApiKey2 = "07a0e408a6f100177a7ab70946fb580d";
 const rapidApiKey = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
 const rapidApiKey2 = "f7d7f2fe88msh572b312c212385cp1f28e8jsn8e41ff9814a4"
 const rapidApiKey3 = "0b54f54be9mshd283a791dd6a7cep1ff786jsncc5470d7f2a8"
-const moviePullLimit = 1;
+const moviePullLimit = 8;
 const imageBaseUrl = "https://image.tmdb.org/t/p/original";
 const providers = {
   netflix: "/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg",
