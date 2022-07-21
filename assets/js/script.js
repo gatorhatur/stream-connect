@@ -459,6 +459,3 @@ $(window).ready(function(){
   loadSearch();
 })
 
-
-
-
