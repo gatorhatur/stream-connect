@@ -263,7 +263,8 @@ var submitHandler = async function(event) {
   $("#search_input").val("");
   saveSearch(searchString);
 }
-else if ($(event.target).hasClass("history")) { //if the target has the data-isActor attribute
+  else if ($(event.target).hasClass("history")) { //if the target has the data-isActor attribute
+    debugger;
     var isActorH = $(event.target).attr("data-isActor");
     var searchString = $(event.target).text();
     console.log("using history");
@@ -391,6 +392,10 @@ var saveSearch = function (search) {
   console.log(searchObj);
   buttonCreator(searchObj);
   searchArray.push(searchObj);
+  if (searchArray.length > 3) {
+    searchArray.slice(0, 1);
+    $(".history:first-child").remove();
+  }
   localStorage.setItem("searchName", JSON.stringify(searchArray));
 };
 
