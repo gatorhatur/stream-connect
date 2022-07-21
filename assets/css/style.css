@@ -59,6 +59,7 @@ nav {
 .movie {
     padding: 0 !important;
     border-left: 11px solid rgb(32, 39, 41);
+    background-color: rgb(82, 167, 123);
 }
 
 .streaming-services {
