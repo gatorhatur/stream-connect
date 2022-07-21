@@ -304,4 +304,47 @@ $('#exit-modal').on('click', function () {
     modalInstance.destroy();
 })
 
+/Populate Search History under History Tab- track what the search input was, if actor was true or false (was it an actor or movie search)
+
+//Save Search Values
+
+var saveSearch = function (search) {
+  
+  var searchObj = {
+    search: $(search).text(),
+    isActor: $(search).attr("data-isActor")
+  };
+
+  searchArray.push(searchObj);
+  localStorage.setItem("searchName", JSON.stringify(searchArray));
+};
+
+//Load Search Value (color-code button for actor v. movie??)
+
+var loadSearch = function () {
+  searchArray = JSON.parse(localStorage.getItem("searchName"));
+  buttonCreator(searchArray);
+};
+
+//Storage of History
+
+var buttonCreator = function (saveData) {
+
+  historySection.innerHTML = "";
+  if (saveData.length > 0) {
+      for (let i = 0; i < saveData.length; i++) {
+          const element = saveData[i];
+          var button = document.createElement("button");
+          button.textContent = saveData[i];
+          historySection.appendChild(button);
+          button.onclick = function() {
+              searchName = saveData[i];
+              getActorInfo(saveData[i]);
+              getMovieInfo(saveData[i]);
+          }
+      }
+  }
+
+};
+
 
