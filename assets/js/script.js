@@ -275,7 +275,7 @@ else {
   
   movieContainer.children().remove();
 
-if (isActor === 'true' || isActorH === 'true') { 
+if ((isActor === 'false' && isActorH === 'true') || (isActor === 'true' && isActorH === 'true')) { 
   console.log("searching by actor name");
   await searchActorName(searchString);
   console.log("finished searching for actor");
