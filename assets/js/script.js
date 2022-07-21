@@ -42,8 +42,8 @@ const imageBaseUrl = "https://image.tmdb.org/t/p/original";
 
 
 let movies = [];
-var actorId = ""
-let isActor = 'true';
+var actorId = "";
+var isActor = 'true';
 let page = 1;
 
 console.log("Script files is working");
@@ -60,11 +60,11 @@ $(document).ready(function(){
     $('.tabs').tabs();
   }); 
 
-var getMovie = function (movieSting) {
+var getMovie = async function (movieSting) {
   // format the github api Url
   var apiUrl = "https://api.themoviedb.org/3/search/movie?api_key=" + tmdbApiKey + "&language=en-US&query=" + encodeURI(movieSting) + "&page=1&include_adult=false";
 // make a request to the url
-fetch(apiUrl).then(function(response){
+await fetch(apiUrl).then(function(response){
   response.json().then(function(data){
     //console.log(data,);
     movies = []
@@ -93,7 +93,7 @@ fetch(apiUrl).then(function(response){
 var submitHandler = async function(event) {
   //console.log($(event.target).attr("data-isActor"));
   //if the target is the search button
-
+ 
   if ($(event.target).hasClass("btn")) {
     //get value from input element
   var searchString = $("#search_input").val()
@@ -116,17 +116,16 @@ else if ($(event.target).hasClass("history")) { //if the target has the data-isA
 else {
     return;
 }
- 
-
+debugger;
 if (isActor === 'true') { 
-    console.log("searching by actor name");
+  console.log("searching by actor name");
   await searchActorName(searchString);
   console.log("finished searching for actor");
   await getMovieId(actorId);
   console.log("finished getting movie ids");
 }
 else {
-  console.log("getting movie by name!")
+  console.log("getting movie by name!");
   await getMovie(searchString);
   console.log("finished searching by movie name");
 }
@@ -220,7 +219,6 @@ var searchActorName = async function (name) {
       .catch (function(err) {
         triggerModal(err);
       })
-  
 
 };
 
