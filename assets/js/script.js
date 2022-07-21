@@ -1,4 +1,4 @@
-var movieTitleContainer = document.getElementById("movie-title-container");
+var movieContainer = $(".movies-container");
 var movieTitle = document.getElementById("movie-title")
 var modalInstance;
 var searchInput = document.querySelector("#search_input");
@@ -9,9 +9,9 @@ var historySection = $("#history-container");
 
 const tmdbApiKey = "346f7b7cb4a8eacfd5f60caf07af955f";
 const tmdbApiKey2 = "07a0e408a6f100177a7ab70946fb580d";
-const rapidApiKey3 = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
-const rapidApiKey2 = "f7d7f2fe88msh572b312c212385cp1f28e8jsn8e41ff9814a4"
-const rapidApiKey = "0b54f54be9mshd283a791dd6a7cep1ff786jsncc5470d7f2a8"
+const rapidApiKey2 = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
+const rapidApiKey = "f7d7f2fe88msh572b312c212385cp1f28e8jsn8e41ff9814a4"
+const rapidApiKey3 = "0b54f54be9mshd283a791dd6a7cep1ff786jsncc5470d7f2a8"
 const moviePullLimit = 3;
 const providers = {
   netflix: "/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg",
@@ -61,7 +61,6 @@ $(document).ready(function(){
   }); 
 
 var getMovie = function (movieSting) {
-  console.log("getting movie by name!")
   // format the github api Url
   var apiUrl = "https://api.themoviedb.org/3/search/movie?api_key=" + tmdbApiKey + "&language=en-US&query=" + encodeURI(movieSting) + "&page=1&include_adult=false";
 // make a request to the url
@@ -127,53 +126,71 @@ if (isActor === 'true') {
   console.log("finished getting movie ids");
 }
 else {
+  console.log("getting movie by name!")
   await getMovie(searchString);
-  console.log("finished searching by movie name")
+  console.log("finished searching by movie name");
 }
   // await getAllMovieInfo();
   // console.log("all data is read!");
 
-  //insert dynamic data generattion code
+  var startIndex = page * moviePullLimit - moviePullLimit;
+  var constraint = moviePullLimit * page;
+  //console.log(startIndex, constraint);
+  
+  for (var i = startIndex; i < constraint; i++){
+    displayMovies(movies[i]);
+  }
 
   return;
 
 }
 
 //Create a function to accept array of information and movie title parameter
-var displayMovies = function(title){
-response.json().then(function(movieObj){
-  displayMovies(movieObj, title);
-})
-//clear old content
-movieTitleContainer.textContent = "";
-movieTitle.textContent = title;
-
-//looper over movies
-for (var i = 0; i < moviePullLimit; i++){
-//format movie name
-var movieNameEl = movieObj[i].title;
-
-//create movie title header container
- var movieContainer = document.createElement("div");
- movieContainer.classList = "align-center";
-
-//create a span element to hold movie name
-var movieNameEl = document.createElement("span");
-movieNameEl.textContent = movieObj[i].title;
-
-
-//append to container
-movieTitle.appendChild(movieNameEl);
-
-//apend container to the DOM
-movieTitleContainer.appendChild()
-
-movies.forEach(function(element){
-
+var displayMovies = function (title) {
   
-})
-}
+  var rowEl = $("<div>")
+    .addClass("col s12 l6 white row movie")
+  
+  var moviePosterEl = $("<div>")
+    .addClass("movie-poster col s3 l3");
+  
+  var moviePostImg = $("<img>")
+    .attr("src", imageBaseUrl + title.poster)
+    .attr("alt", title.title + " Poster");
+  moviePosterEl.append(moviePostImg);
+  rowEl.append(moviePosterEl);
 
+  var movieTitleEl = $("<div>")
+    .addClass("movie-title col s6 l6")
+    .text(title.title)
+  rowEl.append(movieTitleEl);
+
+  var movieActorsEl = $("<div>")
+    .addClass("other-actors col s6 l6")
+    .text(title.overview)
+  rowEl.append(movieActorsEl);
+
+  var streamServicesEl = $("<div>")
+    .addClass("streaming-services col s3 l3")
+  
+  if (title.streams != null) {
+  
+    title.streams.forEach(function (service) {
+      var streamEl = $("<div>")
+        .addClass(service.name)
+    
+      var streamImgEl = $("<img>")
+        .attr("src", service.poster)
+        .attr("alt", service.name + " Icon")
+    
+      streamEl.append(streamImgEl);
+      streamServicesEl.append(streamEl);
+    })
+  }
+  
+  rowEl.append(streamServicesEl);
+  
+  movieContainer.append(rowEl);
 
 };
 
@@ -317,7 +334,8 @@ var updateStreamInfo = function (index) {
 }
 
 $(".switch").on("change", function (event) {
-  if (isActor) {
+  
+  if (isActor === 'true') {
     isActor = 'false';
   }
   else {
@@ -390,6 +408,7 @@ var buttonCreator = function (saveData) {
           .text(saveData.search)
           .addClass("history")
           .attr("data-isActor",saveData.isActor);
-          console.log(button);
+          //console.log(button);
           historySection.append(button);
 };
+
