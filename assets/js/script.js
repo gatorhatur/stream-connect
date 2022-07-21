@@ -1,7 +1,10 @@
-
 var movieTitleContainer = document.getElementById("movie-title-container");
 var movieTitle = document.getElementById("movie-title")
-
+var modalInstance;
+var searchInput = document.querySelector("#search_input");
+var searchArray = [];
+var searchName = "";
+var historySection = $("#history-container");
 
 
 const tmdbApiKey = "346f7b7cb4a8eacfd5f60caf07af955f";
@@ -38,7 +41,7 @@ const imageBaseUrl = "https://image.tmdb.org/t/p/original";
 
 let movies = [];
 var actorId = ""
-let isActor = true;
+let isActor = 'true';
 let page = 1;
 
 console.log("Script files is working");
@@ -53,16 +56,16 @@ document.addEventListener('DOMContentLoaded', function () {
 //initialize tabs
 $(document).ready(function(){
     $('.tabs').tabs();
-
   }); 
 
-var getMovie = function(movieSting){
+var getMovie = function (movieSting) {
+  console.log("getting movie by name!")
   // format the github api Url
   var apiUrl = "https://api.themoviedb.org/3/search/movie?api_key=" + tmdbApiKey + "&language=en-US&query=" + encodeURI(movieSting) + "&page=1&include_adult=false";
 // make a request to the url
 fetch(apiUrl).then(function(response){
   response.json().then(function(data){
-    console.log(data,);
+    //console.log(data,);
     movies = []
     data.results.forEach(function (element, index) {
 
@@ -75,33 +78,64 @@ fetch(apiUrl).then(function(response){
       }
       
       movies.push(movieObj);
-      console.log(movieObj);
-      console.log(movieObj.title, movieObj.id);
-
+      //console.log(movieObj);
+      //console.log(movieObj.title, movieObj.id);
     })
+    getAllMovieInfo();
   })
 });
 }
 //getMovie();
 
-var submitHandler = function(event) {
-  console.log(event);
-  //is this the search button, 
-if ($(event.target).hasClass("btn")){
-//get value from input element
- var searchInputForm = $("#search_input").val()
-//check to see if there is input in searcbox, if not pormpt please enter a movie title
-if (searchInputForm) {
-  getMovie(searchInputForm);
-  textInput.value = "";
-} else{
-  alert("please enter a movie title");
+
+
+var submitHandler = async function(event) {
+  //console.log($(event.target).attr("data-isActor"));
+  //if the target is the search button
+
+  if ($(event.target).hasClass("btn")) {
+    //get value from input element
+  var searchString = $("#search_input").val()
+  //check to see if there is input in searcbox, if not pormpt please enter a movie title
+  if (!searchString) {
+    // $('.modal-content').html("<h4>Input Error!</h4><p>Please input a valid Actor or Movie in the search field.</p><p>Example inputs are: Tom Cruise, Harry Potter, Bradley Cooper.");
+    // modalInstance = M.Modal.init(elems, { dismissible: false });
+    triggerModal("Please input a valid Actor or Movie in the search field.</p><p>Example inputs are: Tom Cruise, Harry Potter, Bradley Cooper.");
+    return;
+  }
+    
+  $("#search_input").val("");
+  saveSearch(searchString);
 }
-console.log(event);
+else if ($(event.target).hasClass("history")) { //if the target has the data-isActor attribute
+    var isActor = $(event.target).attr("data-isActor");
+    var searchString = $(event.target).text();
+    console.log("using history");
+}
+else {
+    return;
+}
+ 
 
+if (isActor === 'true') { 
+    console.log("searching by actor name");
+  await searchActorName(searchString);
+  console.log("finished searching for actor");
+  await getMovieId(actorId);
+  console.log("finished getting movie ids");
+}
+else {
+  await getMovie(searchString);
+  console.log("finished searching by movie name")
+}
+  // await getAllMovieInfo();
+  // console.log("all data is read!");
 
+  //insert dynamic data generattion code
 
-}}
+  return;
+
+}
 
 //Create a function to accept array of information and movie title parameter
 var displayMovies = function(title){
@@ -148,32 +182,33 @@ $("nav").on("click", submitHandler);
 
 //Search Actor API
 
-var searchActorName = function (name) {
+var searchActorName = async function (name) {
+  console.log("Getting Actor Id!")
   //set actorId to blank
   actorId = "";
 
   var actorName = "https://api.themoviedb.org/3/search/person?api_key=346f7b7cb4a8eacfd5f60caf07af955f&language=en-US&query=" + encodeURI(name) + "&page=1&include_adult=false";
-  console.log(actorName);
+  //console.log(actorName);
 
 
 //moved then up to json see commented out portion
- return fetch(actorName).then(function(res) {
+ await fetch(actorName).then(function(res) {
         return res.json();
       }).then(function(data) {
         //console.log(data.results[0].id);
         actorId = data.results[0].id;
-        return actorId;
       })//.then(function(data) {
       .catch (function(err) {
-        console.log(err);
+        triggerModal(err);
       })
   
 
 };
 
 var getMovieId = function (id) {
+  console.log("Getting Ids of movies!");
   const apiUrl = "https://api.themoviedb.org/3/discover/movie?api_key="+tmdbApiKey+"&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_people="+id+"&with_watch_monetization_types=flatrate"
-  console.log(apiUrl);
+  //console.log(apiUrl);
 
   //clear movies in the event of the function being called again
   movies = [];
@@ -181,7 +216,7 @@ var getMovieId = function (id) {
   fetch(apiUrl).then(function (response) {
     if (response.ok) {
       response.json().then(function (data) {
-        console.log(data);
+        //console.log(data);
         //iterate through each element and set data // will need to solve for limits
         data.results.forEach(function (element, index) {
 
@@ -194,12 +229,15 @@ var getMovieId = function (id) {
           }
           
           movies.push(movieObj);
+          
         })
+
+        getAllMovieInfo();
       })
     }
     else {
       //trigger modal
-      console.log("Response no ok");
+      triggerModal("Something is wrong with the connection. Please try again later");
     }
   })
 }
@@ -208,7 +246,8 @@ var getMovieInfo = function (movieId,index) {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'f7d7f2fe88msh572b312c212385cp1f28e8jsn8e41ff9814a4',
+            // 'X-RapidAPI-Key': 'f7d7f2fe88msh572b312c212385cp1f28e8jsn8e41ff9814a4',
+            'X-RapidAPI-Key': rapidApiKey,
             'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
         }
     };
@@ -220,8 +259,8 @@ var getMovieInfo = function (movieId,index) {
     fetch(movieInfo, options)
         .then(response => response.json())
         .then((data) => {
-            console.log(data.cast);
-            console.log(data.streamingInfo);
+            //console.log(data.cast);
+            //console.log(data.streamingInfo);
 
             var cast = data.cast;
             var streamingInfo = data.streamingInfo;
@@ -231,15 +270,17 @@ var getMovieInfo = function (movieId,index) {
 
           updateStreamInfo(index);
         })
-        .catch(err => console.error(err));
+        .catch(err => triggerModal(err));
 }
 
 var getAllMovieInfo = async function () {
+  console.log("Gathering Streaming Info for all movies");
   var startIndex = page * moviePullLimit - moviePullLimit;
   var constraint = moviePullLimit * page;
-  console.log(startIndex, constraint);
+  //console.log(startIndex, constraint);
   
   for (var i = startIndex; i < constraint; i++){
+    console.log(movies[i].id)
     await getMovieInfo(movies[i].id, i);
   }
 }
@@ -275,12 +316,73 @@ var updateStreamInfo = function (index) {
 
 $(".switch").on("change", function (event) {
   if (isActor) {
-    isActor = false;
+    isActor = 'false';
   }
   else {
-    isActor = true;
+    isActor = 'true';
   }
 })
 
-getMovieInfo();
 
+//moved this up inside the main submit handler
+// $('.search-btn').on('click', function () {
+//     if ($('#search_input').val().length >= 1) {
+//         return;
+//     } else {
+//         $('.modal-content').html("<h4>Input Error!</h4><p>Please input a valid Actor or Movie in the search field.</p><p>Example inputs are: Tom Cruise, Harry Potter, Bradley Cooper.");
+//         modalInstance = M.Modal.init(elems, { dismissible: false });
+//     }
+// })
+
+var triggerModal = function (message) {
+  message = "<h4>Oops! Something went wrong!</h4><p>" + message;
+  $('.modal-content').html(message);
+    modalInstance = M.Modal.init(elems, { dismissible: false });
+}
+
+var elems = document.querySelector('.modal');
+
+$('#exit-modal').on('click', function () {
+    modalInstance.destroy();
+})
+
+//Populate Search History under History Tab- track what the search input was, if actor was true or false (was it an actor or movie search)
+
+//Save Search Values
+
+var saveSearch = function (search) {
+  
+  var searchObj = {
+    search: search,
+    isActor: isActor
+  };
+  buttonCreator(searchObj);
+  searchArray.push(searchObj);
+  localStorage.setItem("searchName", JSON.stringify(searchArray));
+};
+
+//Load Search Value (color-code button for actor v. movie??)
+
+var loadSearch = function () {
+  searchArray = JSON.parse(localStorage.getItem("searchName"));
+  historySection.children().remove();
+  searchArray.forEach(function(element){
+    buttonCreator(element);
+  });
+};
+$(window).ready(function(){
+  loadSearch();
+})
+
+
+//Storage of History
+
+var buttonCreator = function (saveData) {
+          // const element = saveData[0];
+          var button = $("<p>")
+          .text(saveData.search)
+          .addClass("history")
+          .attr("data-isActor",saveData.isActor);
+          console.log(button);
+          historySection.append(button);
+};
