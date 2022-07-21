@@ -264,7 +264,6 @@ var submitHandler = async function(event) {
   saveSearch(searchString);
 }
   else if ($(event.target).hasClass("history")) { //if the target has the data-isActor attribute
-    debugger;
     var isActorH = $(event.target).attr("data-isActor");
     var searchString = $(event.target).text();
     console.log("using history");
@@ -275,7 +274,7 @@ else {
   
   movieContainer.children().remove();
 
-if (isActor === 'true' || isActorH === 'true') { 
+if ((isActor === 'false' && isActorH === 'true') || (isActor === 'true' && isActorH === 'true')) { 
   console.log("searching by actor name");
   await searchActorName(searchString);
   console.log("finished searching for actor");
