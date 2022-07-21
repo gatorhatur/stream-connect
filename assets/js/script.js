@@ -460,6 +460,3 @@ $(window).ready(function(){
   loadSearch();
 })
 
-
-
-
