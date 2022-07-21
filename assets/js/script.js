@@ -1,6 +1,10 @@
 var movieTitleContainer = document.getElementById("movie-title-container");
 var movieTitle = document.getElementById("movie-title")
 var modalInstance;
+var searchInput = document.querySelector("#search_input");
+var searchArray = [];
+var searchName = "";
+var historySection = $("#history-container");
 
 const tmdbApiKey = "346f7b7cb4a8eacfd5f60caf07af955f";
 const rapidApiKey = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
@@ -99,7 +103,7 @@ var submitHandler = async function(event) {
   }
     
   $("#search_input").val("");
-  //insert history function here
+  saveSearch(searchString);
 }
 else if ($(event.target).hasClass("history")) { //if the target has the data-isActor attribute
     var isActor = $(event.target).attr("data-isActor");
@@ -300,4 +304,43 @@ $('#exit-modal').on('click', function () {
     modalInstance.destroy();
 })
 
+//Populate Search History under History Tab- track what the search input was, if actor was true or false (was it an actor or movie search)
 
+//Save Search Values
+
+var saveSearch = function (search) {
+  
+  var searchObj = {
+    search: search,
+    isActor: isActor
+  };
+  buttonCreator(searchObj);
+  searchArray.push(searchObj);
+  localStorage.setItem("searchName", JSON.stringify(searchArray));
+};
+
+//Load Search Value (color-code button for actor v. movie??)
+
+var loadSearch = function () {
+  searchArray = JSON.parse(localStorage.getItem("searchName"));
+  historySection.children().remove();
+  searchArray.forEach(function(element){
+    buttonCreator(element);
+  });
+};
+$(window).ready(function(){
+  loadSearch();
+})
+
+
+//Storage of History
+
+var buttonCreator = function (saveData) {
+          // const element = saveData[0];
+          var button = $("<p>")
+          .text(saveData.search)
+          .addClass("history")
+          .attr("data-isActor",saveData.isActor);
+          console.log(button);
+          historySection.append(button);
+};
