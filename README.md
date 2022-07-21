@@ -1,8 +1,8 @@
 # Stream Connect
 
-Created by: Brandon Davis, Maximillian Kottong, John Reed, Alex Rodriguez, and Jamie Thomason
+Created by Group 5: Brandon Davis, Maximillian Kottong, Alex Rodriguez, and Jamie Thomason
 
-[Deployed Stream Connect Site Link]()
+[Deployed Stream Connect Site Link](https://gatorhatur.github.io/stream-connect/)
 
 ## Description
 
@@ -21,6 +21,6 @@ SO THAT I can spend less time browsing for movies
 
 ## Assets
 
-The following image demonstrates the web application's appearance and functionality:
+The following image demonstrates the web application's appearance:
 
-![Screenshot of Deployed Stream Connect Site]()
+![Screenshot of Deployed Stream Connect Site](./assets/images/Screen%20Shot%202022-07-20%20at%2010.43.05%20PM.png)
