@@ -304,7 +304,7 @@ $('#exit-modal').on('click', function () {
     modalInstance.destroy();
 })
 
-/Populate Search History under History Tab- track what the search input was, if actor was true or false (was it an actor or movie search)
+//Populate Search History under History Tab- track what the search input was, if actor was true or false (was it an actor or movie search)
 
 //Save Search Values
 
