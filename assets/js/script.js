@@ -4,7 +4,7 @@ var modalInstance;
 var searchInput = document.querySelector("#search_input");
 var searchArray = [];
 var searchName = "";
-var historySection = document.querySelector("#history-container");
+var historySection = $("#history-container");
 
 const tmdbApiKey = "346f7b7cb4a8eacfd5f60caf07af955f";
 const rapidApiKey = "4de443414emsh4a4ea1571d88c69p17feeajsn6962f58e5c81";
@@ -103,7 +103,7 @@ var submitHandler = async function(event) {
   }
     
   $("#search_input").val("");
-  //insert history function here
+  saveSearch(searchString);
 }
 else if ($(event.target).hasClass("history")) { //if the target has the data-isActor attribute
     var isActor = $(event.target).attr("data-isActor");
@@ -311,10 +311,10 @@ $('#exit-modal').on('click', function () {
 var saveSearch = function (search) {
   
   var searchObj = {
-    search: $(search).text(),
-    isActor: $(search).attr("data-isActor")
+    search: search,
+    isActor: isActor
   };
-
+  buttonCreator(searchObj);
   searchArray.push(searchObj);
   localStorage.setItem("searchName", JSON.stringify(searchArray));
 };
@@ -323,28 +323,24 @@ var saveSearch = function (search) {
 
 var loadSearch = function () {
   searchArray = JSON.parse(localStorage.getItem("searchName"));
-  buttonCreator(searchArray);
+  historySection.children().remove();
+  searchArray.forEach(function(element){
+    buttonCreator(element);
+  });
 };
+$(window).ready(function(){
+  loadSearch();
+})
+
 
 //Storage of History
 
 var buttonCreator = function (saveData) {
-
-  historySection.innerHTML = "";
-  if (saveData.length > 0) {
-      for (let i = 0; i < saveData.length; i++) {
-          const element = saveData[i];
-          var button = document.createElement("button");
-          button.textContent = saveData[i];
-          historySection.appendChild(button);
-          button.onclick = function() {
-              searchName = saveData[i];
-              getActorInfo(saveData[i]);
-              getMovieInfo(saveData[i]);
-          }
-      }
-  }
-
+          // const element = saveData[0];
+          var button = $("<p>")
+          .text(saveData.search)
+          .addClass("history")
+          .attr("data-isActor",saveData.isActor);
+          console.log(button);
+          historySection.append(button);
 };
-
-
