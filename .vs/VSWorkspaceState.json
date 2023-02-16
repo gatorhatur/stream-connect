@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets",
-    "\\assets\\js"
+    "\\stream-connect-v2",
+    "\\stream-connect-v2\\src",
+    "\\stream-connect-v2\\src\\components",
+    "\\stream-connect-v2\\src\\components\\testComponent"
   ],
-  "SelectedNode": "\\assets\\js\\script.js",
+  "SelectedNode": "\\stream-connect-v2\\src\\App.js",
   "PreviewInSolutionExplorer": false
 }
